@@ -64,7 +64,7 @@ function createPdf() {
 
   y -= 15;
   addText('SMA Mardi Yuana Depok', left, y, 'F2', 10, 0);
-  addText('Lulus 2022', 495, y, 'F2', 9, 0.25);
+  addText('Lulus 2024', 495, y, 'F2', 9, 0.25);
   y -= 12;
   addText('Jurusan Matematika dan Ilmu Pengetahuan Alam (MIPA)', left + 8, y, 'F2', 9.5, 0.2);
 

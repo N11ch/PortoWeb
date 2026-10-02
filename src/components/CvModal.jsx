@@ -130,7 +130,7 @@ export default function CvModal({ isOpen, onClose }) {
                     SMA Mardi Yuana Depok
                   </h3>
                   <span className="text-xs font-mono text-neutral-500">
-                    Lulus 2022
+                    Lulus 2024
                   </span>
                 </div>
                 <p className="text-xs text-neutral-700">
