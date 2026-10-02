@@ -1,0 +1,78 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 4608 >>
+stream
+BT /F1 20 Tf 0.1 0.15 0.25 rg 1 0 0 1 45 800 Tm (NICHOLAS KENJI ANGESTI) Tj ET
+BT /F1 10 Tf 0.85 0.45 0.35 rg 1 0 0 1 45 784 Tm (Computer Science Student | Aspiring Software Engineer) Tj ET
+BT /F2 9 Tf 0.3 0.35 0.45 rg 1 0 0 1 45 770 Tm (Email: nicholas.aang89@gmail.com  |  Web: nicholaskenji.com  |  GitHub: github.com/N11ch) Tj ET
+BT /F2 9 Tf 0.3 0.35 0.45 rg 1 0 0 1 45 758 Tm (LinkedIn: linkedin.com/in/nicholas-kenji-angesti-77575532b) Tj ET
+0.15 0.2 0.3 RG 1.5 w 45 748 m 550 748 l S
+BT /F1 11 Tf 0.15 0.2 0.3 rg 1 0 0 1 45 730 Tm (PROFIL SINGKAT) Tj ET
+BT /F2 9.5 Tf 0.25 0.25 0.25 rg 1 0 0 1 45 716 Tm (Mahasiswa jurusan Computer Science di Universitas Bina Nusantara dengan ketertarikan mendalam) Tj ET
+BT /F2 9.5 Tf 0.25 0.25 0.25 rg 1 0 0 1 45 704 Tm (pada pengembangan aplikasi Mobile \(Flutter, Kotlin\) dan Full-Stack Web \(React, Next.js, TypeScript\).) Tj ET
+BT /F2 9.5 Tf 0.25 0.25 0.25 rg 1 0 0 1 45 692 Tm (Berfokus pada pemahaman komputasi dasar, struktur data, dan penulisan kode yang bersih \(clean code\)) Tj ET
+BT /F2 9.5 Tf 0.25 0.25 0.25 rg 1 0 0 1 45 680 Tm (dengan ambisi utama berkarier dan berkembang menjadi seorang Software Engineer yang adaptif.) Tj ET
+0.15 0.2 0.3 RG 1.5 w 45 668 m 550 668 l S
+BT /F1 11 Tf 0.15 0.2 0.3 rg 1 0 0 1 45 650 Tm (PENDIDIKAN) Tj ET
+BT /F1 10 Tf 0.1 0.1 0.1 rg 1 0 0 1 45 635 Tm (Universitas Bina Nusantara \(BINUS University\)) Tj ET
+BT /F1 9 Tf 0.4 0.4 0.4 rg 1 0 0 1 400 635 Tm (2022 - Sekarang \(Semester 5\)) Tj ET
+BT /F2 9.5 Tf 0.3 0.3 0.3 rg 1 0 0 1 55 622 Tm (S1 Computer Science  |  Perkiraan Lulus: 2028) Tj ET
+BT /F2 9 Tf 0.45 0.45 0.45 rg 1 0 0 1 55 611 Tm (Mempelajari fundamental Ilmu Komputer, Algoritma & Struktur Data, serta Rekayasa Perangkat Lunak.) Tj ET
+BT /F1 10 Tf 0.1 0.1 0.1 rg 1 0 0 1 45 595 Tm (SMA Mardi Yuana Depok) Tj ET
+BT /F1 9 Tf 0.4 0.4 0.4 rg 1 0 0 1 485 595 Tm (Lulus 2022) Tj ET
+BT /F2 9.5 Tf 0.3 0.3 0.3 rg 1 0 0 1 55 582 Tm (Jurusan Matematika dan Ilmu Pengetahuan Alam \(MIPA\)) Tj ET
+0.15 0.2 0.3 RG 1.5 w 45 570 m 550 570 l S
+BT /F1 11 Tf 0.15 0.2 0.3 rg 1 0 0 1 45 552 Tm (PROYEK & PENGALAMAN PENGEMBANGAN) Tj ET
+BT /F1 10 Tf 0.1 0.1 0.1 rg 1 0 0 1 45 537 Tm (Genshin Import - Mobile E-Commerce & Inventory App) Tj ET
+BT /F1 9 Tf 0.5 0.7 0.6 rg 1 0 0 1 490 537 Tm (Solo Project) Tj ET
+BT /F1 9 Tf 0.85 0.45 0.35 rg 1 0 0 1 55 524 Tm (Peran: Solo Full-Stack Developer  |  Tech: Flutter, Node.js, Express, MySQL, GitHub OAuth, JWT) Tj ET
+BT /F2 9 Tf 0.3 0.3 0.3 rg 1 0 0 1 55 512 Tm (- Merancang arsitektur mobile Feature-First di Flutter dengan 10+ halaman fungsional.) Tj ET
+BT /F2 9 Tf 0.3 0.3 0.3 rg 1 0 0 1 55 501 Tm (- Membangun REST API dengan Express.js dan database relasional MySQL untuk otentikasi & transaksi.) Tj ET
+BT /F2 9 Tf 0.3 0.3 0.3 rg 1 0 0 1 55 490 Tm (- Mengimplementasikan validasi saldo koin real-time dan panel inventaris admin untuk manajemen katalog.) Tj ET
+BT /F1 10 Tf 0.1 0.1 0.1 rg 1 0 0 1 45 474 Tm (Lern - Educational & Collaborative Mobile Platform) Tj ET
+BT /F1 9 Tf 0.9 0.65 0.35 rg 1 0 0 1 445 474 Tm (Team Project \(4 Orang\)) Tj ET
+BT /F1 9 Tf 0.85 0.45 0.35 rg 1 0 0 1 55 461 Tm (Peran: Mobile Developer \(Kontribusi 45%\)  |  Tech: Flutter, NestJS, TypeScript, Prisma, PostgreSQL) Tj ET
+BT /F2 9 Tf 0.3 0.3 0.3 rg 1 0 0 1 55 449 Tm (- Mengembangkan modul client Flutter untuk autentikasi pengguna, antarmuka siswa, guru, dan pesan \(chat\).) Tj ET
+BT /F2 9 Tf 0.3 0.3 0.3 rg 1 0 0 1 55 438 Tm (- Mengintegrasikan AuthService, manajemen sesi JWT AuthState, dan koneksi API backend modular NestJS.) Tj ET
+BT /F2 9 Tf 0.3 0.3 0.3 rg 1 0 0 1 55 427 Tm (- Bekerja sama dalam tim mengelola skema database PostgreSQL di Supabase menggunakan Prisma ORM.) Tj ET
+0.15 0.2 0.3 RG 1.5 w 45 415 m 550 415 l S
+BT /F1 11 Tf 0.15 0.2 0.3 rg 1 0 0 1 45 397 Tm (KEMAMPUAN UTAMA) Tj ET
+BT /F1 9.5 Tf 0.2 0.2 0.2 rg 1 0 0 1 55 382 Tm (Mobile Development:) Tj ET
+BT /F2 9.5 Tf 0.3 0.3 0.3 rg 1 0 0 1 185 382 Tm (Flutter, Dart, Kotlin \(Android Native\)) Tj ET
+BT /F1 9.5 Tf 0.2 0.2 0.2 rg 1 0 0 1 55 369 Tm (Frontend & Web:) Tj ET
+BT /F2 9.5 Tf 0.3 0.3 0.3 rg 1 0 0 1 185 369 Tm (React 19, Next.js, TypeScript, Tailwind CSS, HTML5, CSS3, JavaScript \(ES6+\)) Tj ET
+BT /F1 9.5 Tf 0.2 0.2 0.2 rg 1 0 0 1 55 356 Tm (Backend & Database:) Tj ET
+BT /F2 9.5 Tf 0.3 0.3 0.3 rg 1 0 0 1 185 356 Tm (Node.js, Express, NestJS, Prisma ORM, MySQL, PostgreSQL, Supabase, REST APIs) Tj ET
+BT /F1 9.5 Tf 0.2 0.2 0.2 rg 1 0 0 1 55 343 Tm (Core & Developer Tools:) Tj ET
+BT /F2 9.5 Tf 0.3 0.3 0.3 rg 1 0 0 1 185 343 Tm (Bahasa Pemrograman C, Struktur Data & Algoritma, Git, GitHub, Vite, Postman) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000257 00000 n 
+0000004917 00000 n 
+0000004992 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+5062
+%%EOF

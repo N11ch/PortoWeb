@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Hero({ isDarkMode }) {
+export default function Hero({ isDarkMode, onOpenCv }) {
   const scrollTo = (id) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -42,16 +42,25 @@ export default function Hero({ isDarkMode }) {
           </p>
 
           {/* Action CTAs */}
-          <div className="flex flex-wrap gap-4 pt-2">
+          <div className="flex flex-wrap gap-3 sm:gap-4 pt-2">
             <button
               onClick={() => scrollTo('projects')}
-              className="neo-btn px-8 py-3.5 rounded-xl font-mono text-xs font-black uppercase tracking-wider bg-[#81b29a] text-white border-[#2b2d42] hover:bg-[#6f9e87]"
+              className="neo-btn px-6 sm:px-8 py-3.5 rounded-xl font-mono text-xs font-black uppercase tracking-wider bg-[#81b29a] text-white border-[#2b2d42] hover:bg-[#6f9e87]"
             >
-              Explore Portfolio Projects &rarr;
+              Explore Projects &rarr;
+            </button>
+            <button
+              onClick={onOpenCv}
+              className="neo-btn px-5 sm:px-6 py-3.5 rounded-xl font-mono text-xs font-black uppercase tracking-wider bg-[#e07a5f] text-white border-[#2b2d42] hover:bg-[#d6684c] flex items-center gap-2 shadow-[4px_4px_0px_#2b2d42]"
+            >
+              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+              </svg>
+              <span>Download CV (PDF)</span>
             </button>
             <button
               onClick={() => scrollTo('contact')}
-              className={`neo-btn px-8 py-3.5 rounded-xl font-mono text-xs font-black uppercase tracking-wider border-[#2b2d42] ${
+              className={`neo-btn px-6 sm:px-8 py-3.5 rounded-xl font-mono text-xs font-black uppercase tracking-wider border-[#2b2d42] ${
                 isDarkMode ? 'bg-[#313543] text-[#f2cc8f] hover:bg-[#3d4254]' : 'bg-[#fffdf9] text-[#2b2d42] hover:bg-[#f0e9df]'
               }`}
             >
