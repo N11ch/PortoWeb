@@ -81,7 +81,7 @@ export default function TerminalModal({ isOpen, onClose }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
       
-      <div className="w-full max-w-3xl rounded-2xl border-4 border-slate-950 bg-slate-950 text-cyan-400 font-mono shadow-[12px_12px_0px_#000] overflow-hidden flex flex-col h-[500px]">
+      <div className="w-full max-w-3xl rounded-2xl border-3 sm:border-4 border-slate-950 bg-slate-950 text-cyan-400 font-mono shadow-[8px_8px_0px_#000] sm:shadow-[12px_12px_0px_#000] overflow-hidden flex flex-col h-[500px] max-h-[85vh]">
         
         {/* Terminal Header Bar */}
         <div className="flex items-center justify-between px-4 py-2.5 bg-slate-900 border-b-2 border-slate-800 text-xs font-bold">

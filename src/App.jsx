@@ -26,7 +26,7 @@ function App() {
   return (
     <div 
       style={{ backgroundColor: bgColor, color: textColor }}
-      className="min-h-screen font-sans selection:bg-[#f2cc8f] selection:text-[#2b2d42] relative transition-colors duration-700 ease-in-out"
+      className="min-h-screen font-sans selection:bg-[#f2cc8f] selection:text-[#2b2d42] relative transition-colors duration-700 ease-in-out overflow-x-hidden w-full max-w-full"
     >
       
       {/* Simple, Smooth Interactive Dot-Grid Canvas Background */}

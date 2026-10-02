@@ -53,7 +53,7 @@ export default function Navbar({ isDarkMode, setIsDarkMode, onOpenTerminal, acti
       scrolled ? 'py-3' : 'py-5'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`flex items-center justify-between px-6 py-3 rounded-2xl border-3 transition-all duration-300 ${
+        <div className={`flex items-center justify-between px-4 sm:px-6 py-2.5 sm:py-3 rounded-2xl border-3 transition-all duration-300 ${
           isDarkMode 
             ? 'bg-[#313543]/90 border-[#1a1c23] shadow-[6px_6px_0px_#1a1c23] backdrop-blur-md' 
             : 'bg-[#fffdf9]/95 border-[#2b2d42] shadow-[6px_6px_0px_#2b2d42] backdrop-blur-md'

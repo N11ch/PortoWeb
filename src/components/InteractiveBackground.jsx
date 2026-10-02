@@ -35,9 +35,23 @@ export default function InteractiveBackground({ isDarkMode, currentPalette }) {
       mouse.active = false;
     };
 
+    const handleTouchMove = (e) => {
+      if (e.touches && e.touches[0]) {
+        mouse.targetX = e.touches[0].clientX;
+        mouse.targetY = e.touches[0].clientY;
+        mouse.active = true;
+      }
+    };
+
+    const handleTouchEnd = () => {
+      mouse.active = false;
+    };
+
     window.addEventListener('resize', handleResize);
     window.addEventListener('mousemove', handleMouseMove);
     document.addEventListener('mouseleave', handleMouseLeave);
+    window.addEventListener('touchmove', handleTouchMove, { passive: true });
+    window.addEventListener('touchend', handleTouchEnd);
 
     // Floating Retro Geometric Particles
     const shapes = Array.from({ length: 18 }, () => ({
@@ -151,6 +165,8 @@ export default function InteractiveBackground({ isDarkMode, currentPalette }) {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseleave', handleMouseLeave);
+      window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener('touchend', handleTouchEnd);
       cancelAnimationFrame(animationFrameId);
     };
   }, [isDarkMode, currentPalette]);

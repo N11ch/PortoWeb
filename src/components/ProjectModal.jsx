@@ -20,19 +20,19 @@ export default function ProjectModal({ project, onClose, isDarkMode }) {
       
       {/* Modal Container */}
       <div 
-        className={`relative w-full max-w-5xl rounded-3xl border-4 p-6 sm:p-8 max-h-[90vh] overflow-y-auto transition-all ${
+        className={`relative w-full max-w-5xl rounded-3xl border-3 sm:border-4 p-4 sm:p-8 max-h-[92vh] overflow-y-auto transition-all ${
           isDarkMode 
-            ? 'bg-[#313543] border-[#1a1c23] text-white shadow-[12px_12px_0px_#1a1c23]' 
-            : 'bg-[#fffdf9] border-[#2b2d42] text-[#2b2d42] shadow-[12px_12px_0px_#2b2d42]'
+            ? 'bg-[#313543] border-[#1a1c23] text-white shadow-[8px_8px_0px_#1a1c23] sm:shadow-[12px_12px_0px_#1a1c23]' 
+            : 'bg-[#fffdf9] border-[#2b2d42] text-[#2b2d42] shadow-[8px_8px_0px_#2b2d42] sm:shadow-[12px_12px_0px_#2b2d42]'
         }`}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-6 right-6 p-2 rounded-xl border-2 font-mono font-bold text-xs bg-[#e07a5f] text-white border-[#2b2d42] shadow-[3px_3px_0px_#2b2d42] hover:bg-[#d6684c] transition-all"
+          className="absolute top-4 right-4 sm:top-6 sm:right-6 p-2 px-3 rounded-xl border-2 font-mono font-bold text-xs bg-[#e07a5f] text-white border-[#2b2d42] shadow-[3px_3px_0px_#2b2d42] hover:bg-[#d6684c] transition-all"
         >
-          ESC / Close [X]
+          <span className="hidden sm:inline">ESC / </span>Close [X]
         </button>
 
         {/* Category & Title Header */}
@@ -105,7 +105,7 @@ export default function ProjectModal({ project, onClose, isDarkMode }) {
         {/* Screenshot Gallery Viewer */}
         <div className="relative mb-6 flex justify-center">
           <div className={`relative transition-all duration-300 rounded-2xl overflow-hidden border-3 border-[#2b2d42] bg-[#2b2d42] shadow-[6px_6px_0px_#2b2d42] ${
-            deviceFrame === 'mobile' ? 'w-72 h-[480px]' : 'w-full h-80 sm:h-96'
+            deviceFrame === 'mobile' ? 'w-full max-w-[280px] sm:w-72 h-[420px] sm:h-[480px]' : 'w-full h-64 sm:h-96'
           }`}>
             <img
               src={project.galleryImages[activeImageIndex]}

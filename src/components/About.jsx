@@ -39,7 +39,7 @@ export default function About({ isDarkMode, onSelectSkillFilter, selectedSkill }
         <div className="lg:col-span-7 space-y-6">
           
           <ScrollReveal direction="left" delay={200}>
-            <div className={`p-8 rounded-2xl border-3 transition-all ${
+            <div className={`p-5 sm:p-8 rounded-2xl border-3 transition-all ${
               isDarkMode 
                 ? 'bg-[#313543] border-[#1a1c23] shadow-[8px_8px_0px_#1a1c23]' 
                 : 'bg-[#fffdf9] border-[#2b2d42] shadow-[8px_8px_0px_#2b2d42]'
@@ -87,7 +87,7 @@ export default function About({ isDarkMode, onSelectSkillFilter, selectedSkill }
 
           {/* Timeline Section */}
           <ScrollReveal direction="left" delay={350}>
-            <div className={`p-8 rounded-2xl border-3 ${
+            <div className={`p-5 sm:p-8 rounded-2xl border-3 ${
               isDarkMode 
                 ? 'bg-[#313543] border-[#1a1c23] shadow-[8px_8px_0px_#1a1c23]' 
                 : 'bg-[#fffdf9] border-[#2b2d42] shadow-[8px_8px_0px_#2b2d42]'
@@ -131,7 +131,7 @@ export default function About({ isDarkMode, onSelectSkillFilter, selectedSkill }
         {/* Right Column: Interactive Skill Matrix (5 cols) */}
         <div className="lg:col-span-5 space-y-6">
           <ScrollReveal direction="right" delay={250}>
-            <div className={`p-8 rounded-2xl border-3 ${
+            <div className={`p-5 sm:p-8 rounded-2xl border-3 ${
               isDarkMode 
                 ? 'bg-[#313543] border-[#1a1c23] shadow-[8px_8px_0px_#1a1c23]' 
                 : 'bg-[#fffdf9] border-[#2b2d42] shadow-[8px_8px_0px_#2b2d42]'

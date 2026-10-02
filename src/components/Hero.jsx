@@ -60,39 +60,39 @@ export default function Hero({ isDarkMode }) {
           </div>
 
           {/* Metric Stat Blocks with Folder Header Accent */}
-          <div className="grid grid-cols-3 gap-3 pt-6 max-w-xl">
-            <div className={`p-4 rounded-xl border-3 transition-all relative overflow-hidden ${
+          <div className="grid grid-cols-3 gap-2 sm:gap-3 pt-6 max-w-xl">
+            <div className={`p-2.5 sm:p-4 rounded-xl border-3 transition-all relative overflow-hidden ${
               isDarkMode 
                 ? 'bg-[#313543] border-[#1a1c23] shadow-[4px_4px_0px_#1a1c23]' 
                 : 'bg-[#fffdf9] border-[#2b2d42] shadow-[4px_4px_0px_#2b2d42]'
             }`}>
-              <div className="h-1.5 bg-[#e07a5f] -mx-4 -mt-4 mb-3" />
-              <div className="text-2xl sm:text-3xl font-black text-[#e07a5f] font-mono">2</div>
-              <div className={`text-[11px] font-mono font-bold uppercase ${isDarkMode ? 'text-slate-400' : 'text-[#3d405b]'}`}>
+              <div className="h-1.5 bg-[#e07a5f] -mx-2.5 sm:-mx-4 -mt-2.5 sm:-mt-4 mb-2.5 sm:mb-3" />
+              <div className="text-xl sm:text-3xl font-black text-[#e07a5f] font-mono">2</div>
+              <div className={`text-[10px] sm:text-[11px] font-mono font-bold uppercase ${isDarkMode ? 'text-slate-400' : 'text-[#3d405b]'}`}>
                 Featured Apps
               </div>
             </div>
 
-            <div className={`p-4 rounded-xl border-3 transition-all relative overflow-hidden ${
+            <div className={`p-2.5 sm:p-4 rounded-xl border-3 transition-all relative overflow-hidden ${
               isDarkMode 
                 ? 'bg-[#313543] border-[#1a1c23] shadow-[4px_4px_0px_#1a1c23]' 
                 : 'bg-[#fffdf9] border-[#2b2d42] shadow-[4px_4px_0px_#2b2d42]'
             }`}>
-              <div className="h-1.5 bg-[#81b29a] -mx-4 -mt-4 mb-3" />
-              <div className="text-2xl sm:text-3xl font-black text-[#81b29a] font-mono">2 Types</div>
-              <div className={`text-[11px] font-mono font-bold uppercase ${isDarkMode ? 'text-slate-400' : 'text-[#3d405b]'}`}>
+              <div className="h-1.5 bg-[#81b29a] -mx-2.5 sm:-mx-4 -mt-2.5 sm:-mt-4 mb-2.5 sm:mb-3" />
+              <div className="text-xl sm:text-3xl font-black text-[#81b29a] font-mono">2 Types</div>
+              <div className={`text-[10px] sm:text-[11px] font-mono font-bold uppercase ${isDarkMode ? 'text-slate-400' : 'text-[#3d405b]'}`}>
                 Solo &amp; Team
               </div>
             </div>
 
-            <div className={`p-4 rounded-xl border-3 transition-all relative overflow-hidden ${
+            <div className={`p-2.5 sm:p-4 rounded-xl border-3 transition-all relative overflow-hidden ${
               isDarkMode 
                 ? 'bg-[#313543] border-[#1a1c23] shadow-[4px_4px_0px_#1a1c23]' 
                 : 'bg-[#fffdf9] border-[#2b2d42] shadow-[4px_4px_0px_#2b2d42]'
             }`}>
-              <div className="h-1.5 bg-[#f2cc8f] -mx-4 -mt-4 mb-3" />
-              <div className="text-2xl sm:text-3xl font-black text-[#f2cc8f] font-mono">Mobile &amp; Web</div>
-              <div className={`text-[11px] font-mono font-bold uppercase ${isDarkMode ? 'text-slate-400' : 'text-[#3d405b]'}`}>
+              <div className="h-1.5 bg-[#f2cc8f] -mx-2.5 sm:-mx-4 -mt-2.5 sm:-mt-4 mb-2.5 sm:mb-3" />
+              <div className="text-lg sm:text-2xl lg:text-3xl font-black text-[#f2cc8f] font-mono truncate">Mobile &amp; Web</div>
+              <div className={`text-[10px] sm:text-[11px] font-mono font-bold uppercase ${isDarkMode ? 'text-slate-400' : 'text-[#3d405b]'}`}>
                 Areas of Interest
               </div>
             </div>
@@ -112,10 +112,10 @@ export default function Hero({ isDarkMode }) {
             React &amp; Next.js
           </div>
 
-          <div className={`relative w-72 h-72 sm:w-80 sm:h-80 rounded-2xl border-4 p-3 transition-transform duration-300 hover:scale-[1.02] ${
+          <div className={`relative w-64 h-64 sm:w-80 sm:h-80 max-w-full rounded-2xl border-4 p-3 transition-transform duration-300 hover:scale-[1.02] ${
             isDarkMode 
-              ? 'bg-[#313543] border-[#1a1c23] shadow-[10px_10px_0px_#1a1c23]' 
-              : 'bg-[#fffdf9] border-[#2b2d42] shadow-[10px_10px_0px_#2b2d42]'
+              ? 'bg-[#313543] border-[#1a1c23] shadow-[8px_8px_0px_#1a1c23] sm:shadow-[10px_10px_0px_#1a1c23]' 
+              : 'bg-[#fffdf9] border-[#2b2d42] shadow-[8px_8px_0px_#2b2d42] sm:shadow-[10px_10px_0px_#2b2d42]'
           }`}>
             {/* Top Frame Header Bar */}
             <div className="flex items-center justify-between pb-2 mb-2 border-b-2 border-[#e07a5f]/40 font-mono text-[10px] font-bold uppercase tracking-wider text-[#e07a5f]">
@@ -128,14 +128,14 @@ export default function Hero({ isDarkMode }) {
               <div className={`w-full h-full flex flex-col items-center justify-center p-6 text-center font-mono select-none ${
                 isDarkMode ? 'bg-[#232630] text-[#f2cc8f]' : 'bg-[#f0e9df] text-[#e07a5f]'
               }`}>
-                <div className="w-24 h-24 rounded-2xl border-3 border-[#2b2d42] bg-[#e07a5f] text-white flex items-center justify-center text-3xl font-black shadow-[4px_4px_0px_#2b2d42] mb-3">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl border-3 border-[#2b2d42] bg-[#e07a5f] text-white flex items-center justify-center text-2xl sm:text-3xl font-black shadow-[4px_4px_0px_#2b2d42] mb-3">
                   NK
                 </div>
                 <div className={`text-xs font-black uppercase tracking-wider ${isDarkMode ? 'text-white' : 'text-[#2b2d42]'}`}>
                   Nicholas Kenji
                 </div>
                 <div className="text-[10px] font-bold opacity-75 mt-1">
-                  Mobile &amp; Full-Stack Dev
+                  Aspiring Software Engineer
                 </div>
               </div>
             </div>
