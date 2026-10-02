@@ -4,7 +4,7 @@ import path from 'path';
 function createPdf() {
   const contentLines = [];
 
-  // Strictly monochrome: only pure black or neutral grays
+  // Strictly monochrome regular weight (no bold)
   const addText = (text, x, y, font, size, gray = 0) => {
     const escaped = text
       .replace(/\\/g, '\\\\')
@@ -21,10 +21,10 @@ function createPdf() {
   const left = 45;
   const right = 550;
 
-  // Header: Nama Paling Atas (Pure Black)
-  addText('NICHOLAS KENJI ANGESTI', left, y, 'F1', 19, 0);
+  // Header: Nama Paling Atas (Regular Helvetica F2, clean size)
+  addText('NICHOLAS KENJI ANGESTI', left, y, 'F2', 17, 0);
   y -= 15;
-  addText('Computer Science Student | Aspiring Software Engineer', left, y, 'F1', 10, 0.2);
+  addText('Computer Science Student | Aspiring Software Engineer', left, y, 'F2', 10, 0.2);
   y -= 13;
   addText('Email: nicholas.aang89@gmail.com  |  Web: nicholaskenji.com  |  GitHub: github.com/N11ch', left, y, 'F2', 9, 0.3);
   y -= 12;
@@ -32,11 +32,11 @@ function createPdf() {
   
   // Strip 1: Solid Black Line
   y -= 10;
-  addLine(left, y, right, y, 1.2, 0);
+  addLine(left, y, right, y, 1, 0);
 
   // Section 1: Profil Singkat
   y -= 16;
-  addText('PROFIL SINGKAT', left, y, 'F1', 10.5, 0);
+  addText('PROFIL SINGKAT', left, y, 'F2', 10, 0);
   y -= 13;
   addText('Mahasiswa jurusan Computer Science di Universitas Bina Nusantara dengan ketertarikan mendalam', left, y, 'F2', 9.5, 0.15);
   y -= 12;
@@ -48,40 +48,40 @@ function createPdf() {
 
   // Strip 2: Solid Black Line
   y -= 11;
-  addLine(left, y, right, y, 1.2, 0);
+  addLine(left, y, right, y, 1, 0);
 
-  // Section 2: Pendidikan
+  // Section 2: Pendidikan (Dari 2024, Tanpa Bold)
   y -= 16;
-  addText('PENDIDIKAN', left, y, 'F1', 10.5, 0);
+  addText('PENDIDIKAN', left, y, 'F2', 10, 0);
   
   y -= 14;
-  addText('Universitas Bina Nusantara (BINUS University)', left, y, 'F1', 10, 0);
-  addText('2022 - Sekarang (Semester 5)', 410, y, 'F1', 9, 0.25);
+  addText('Universitas Bina Nusantara (BINUS University)', left, y, 'F2', 10, 0);
+  addText('2024 - Sekarang (Semester 5)', 410, y, 'F2', 9, 0.25);
   y -= 12;
   addText('S1 Computer Science  |  Perkiraan Lulus: 2028', left + 8, y, 'F2', 9.5, 0.2);
   y -= 11;
   addText('Fokus pada fundamental Ilmu Komputer, Struktur Data, Pemrograman C, dan Rekayasa Perangkat Lunak.', left + 8, y, 'F2', 9, 0.3);
 
   y -= 15;
-  addText('SMA Mardi Yuana Depok', left, y, 'F1', 10, 0);
-  addText('Lulus 2022', 495, y, 'F1', 9, 0.25);
+  addText('SMA Mardi Yuana Depok', left, y, 'F2', 10, 0);
+  addText('Lulus 2022', 495, y, 'F2', 9, 0.25);
   y -= 12;
   addText('Jurusan Matematika dan Ilmu Pengetahuan Alam (MIPA)', left + 8, y, 'F2', 9.5, 0.2);
 
   // Strip 3: Solid Black Line
   y -= 11;
-  addLine(left, y, right, y, 1.2, 0);
+  addLine(left, y, right, y, 1, 0);
 
-  // Section 3: Proyek & Peran
+  // Section 3: Proyek & Peran (Tanpa Bold)
   y -= 16;
-  addText('PROYEK & PERAN PENGEMBANGAN', left, y, 'F1', 10.5, 0);
+  addText('PROYEK & PERAN PENGEMBANGAN', left, y, 'F2', 10, 0);
 
   // Proyek 1
   y -= 14;
-  addText('Genshin Import - Mobile E-Commerce & Inventory App', left, y, 'F1', 10, 0);
+  addText('Genshin Import - Mobile E-Commerce & Inventory App', left, y, 'F2', 10, 0);
   addText('Solo Project', 490, y, 'F2', 9, 0.25);
   y -= 12;
-  addText('Peran: Solo Full-Stack Developer  |  Tech: Flutter, Node.js, Express, MySQL, GitHub OAuth, JWT', left + 8, y, 'F1', 9, 0.15);
+  addText('Peran: Solo Full-Stack Developer  |  Tech: Flutter, Node.js, Express, MySQL, GitHub OAuth, JWT', left + 8, y, 'F2', 9, 0.2);
   y -= 11;
   addText('- Merancang arsitektur mobile Feature-First di Flutter dengan 10+ halaman fungsional.', left + 8, y, 'F2', 9, 0.15);
   y -= 11;
@@ -91,10 +91,10 @@ function createPdf() {
 
   // Proyek 2
   y -= 15;
-  addText('Lern - Educational & Collaborative Mobile Platform', left, y, 'F1', 10, 0);
+  addText('Lern - Educational & Collaborative Mobile Platform', left, y, 'F2', 10, 0);
   addText('Group Project (Tim 4 Orang)', 425, y, 'F2', 9, 0.25);
   y -= 12;
-  addText('Peran: Mobile Developer (Kontribusi 45%)  |  Tech: Flutter, NestJS, TypeScript, Prisma, PostgreSQL', left + 8, y, 'F1', 9, 0.15);
+  addText('Peran: Mobile Developer (Kontribusi 45%)  |  Tech: Flutter, NestJS, TypeScript, Prisma, PostgreSQL', left + 8, y, 'F2', 9, 0.2);
   y -= 11;
   addText('- Mengembangkan modul client Flutter untuk autentikasi pengguna, antarmuka siswa, guru, dan pesan/chat.', left + 8, y, 'F2', 9, 0.15);
   y -= 11;
@@ -104,22 +104,22 @@ function createPdf() {
 
   // Strip 4: Solid Black Line
   y -= 11;
-  addLine(left, y, right, y, 1.2, 0);
+  addLine(left, y, right, y, 1, 0);
 
-  // Section 4: Kemampuan Utama
+  // Section 4: Kemampuan Utama (Tanpa Bold)
   y -= 16;
-  addText('KEMAMPUAN UTAMA', left, y, 'F1', 10.5, 0);
+  addText('KEMAMPUAN UTAMA', left, y, 'F2', 10, 0);
   y -= 14;
-  addText('Mobile Development:', left + 8, y, 'F1', 9.5, 0);
+  addText('Mobile Development:', left + 8, y, 'F2', 9.5, 0);
   addText('Flutter, Dart, Kotlin (Android Native)', left + 140, y, 'F2', 9.5, 0.15);
   y -= 12;
-  addText('Frontend & Web:', left + 8, y, 'F1', 9.5, 0);
+  addText('Frontend & Web:', left + 8, y, 'F2', 9.5, 0);
   addText('React 19, Next.js, TypeScript, Tailwind CSS, HTML5, CSS3, JavaScript', left + 140, y, 'F2', 9.5, 0.15);
   y -= 12;
-  addText('Backend & Database:', left + 8, y, 'F1', 9.5, 0);
+  addText('Backend & Database:', left + 8, y, 'F2', 9.5, 0);
   addText('Node.js, Express, NestJS, Prisma ORM, MySQL, PostgreSQL, Supabase, REST APIs', left + 140, y, 'F2', 9.5, 0.15);
   y -= 12;
-  addText('Fundamentals & Tools:', left + 8, y, 'F1', 9.5, 0);
+  addText('Fundamentals & Tools:', left + 8, y, 'F2', 9.5, 0);
   addText('Bahasa Pemrograman C, Algoritma & Struktur Data, Git, GitHub, RESTful API Design', left + 140, y, 'F2', 9.5, 0.15);
 
   const streamContent = contentLines.join('\n');
@@ -128,10 +128,9 @@ function createPdf() {
   const objects = [];
   objects.push(`1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj`);
   objects.push(`2 0 obj\n<< /Type /Pages /Kids [3 0 R] /Count 1 >>\nendobj`);
-  objects.push(`3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>\nendobj`);
-  objects.push(`4 0 obj\n<< /Length ${streamLength} >>\nstream\n${streamContent}\nendstream\nendobj`);
-  objects.push(`5 0 obj\n<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>\nendobj`);
-  objects.push(`6 0 obj\n<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>\nendobj`);
+  objects.push(`3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 4 0 R /Resources << /Font << /F2 4 0 R >> >> >>\nendobj`);
+  objects.push(`4 0 obj\n<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>\nendobj`);
+  objects.push(`5 0 obj\n<< /Length ${streamLength} >>\nstream\n${streamContent}\nendstream\nendobj`);
 
   let offset = 9; // length of "%PDF-1.4\n"
   const offsets = [];
@@ -154,7 +153,7 @@ function createPdf() {
 
   const targetPath = path.resolve('public', 'Nicholas_Kenji_Angesti_CV.pdf');
   fs.writeFileSync(targetPath, fullPdf, 'utf-8');
-  console.log('Successfully generated clean B&W PDF:', targetPath);
+  console.log('Successfully generated clean regular (no bold) PDF:', targetPath);
 }
 
 createPdf();

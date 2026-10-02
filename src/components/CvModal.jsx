@@ -12,14 +12,14 @@ export default function CvModal({ isOpen, onClose }) {
       className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/75 backdrop-blur-sm overflow-y-auto"
       onClick={onClose}
     >
-      {/* Clean Single Card Container - No Double Borders, No Hard Box Shadows */}
+      {/* Clean Single Card Container */}
       <div 
         className="relative w-full max-w-3xl max-h-[92vh] bg-white text-black rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-neutral-300"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Simple Monochrome Top Bar */}
         <div className="flex items-center justify-between px-5 sm:px-8 py-3.5 border-b border-neutral-200 bg-neutral-50 print:hidden">
-          <div className="font-mono text-xs sm:text-sm font-bold tracking-wider uppercase text-neutral-800">
+          <div className="font-mono text-xs sm:text-sm font-medium tracking-wider uppercase text-neutral-800">
             Curriculum Vitae
           </div>
 
@@ -28,7 +28,7 @@ export default function CvModal({ isOpen, onClose }) {
             <a
               href="/Nicholas_Kenji_Angesti_CV.pdf"
               download="Nicholas_Kenji_Angesti_CV.pdf"
-              className="px-3.5 py-1.5 rounded-lg font-mono text-xs font-bold uppercase tracking-wider bg-black text-white hover:bg-neutral-800 transition-all flex items-center gap-1.5"
+              className="px-3.5 py-1.5 rounded-lg font-mono text-xs font-medium uppercase tracking-wider bg-black text-white hover:bg-neutral-800 transition-all flex items-center gap-1.5"
             >
               <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
                 <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
@@ -39,7 +39,7 @@ export default function CvModal({ isOpen, onClose }) {
             {/* Print to PDF */}
             <button
               onClick={handlePrint}
-              className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-mono text-xs font-bold uppercase tracking-wider border border-neutral-300 bg-white text-neutral-800 hover:bg-neutral-100 transition-all"
+              className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-mono text-xs font-medium uppercase tracking-wider border border-neutral-300 bg-white text-neutral-800 hover:bg-neutral-100 transition-all"
               title="Cetak atau Simpan sebagai PDF"
             >
               <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
@@ -51,24 +51,24 @@ export default function CvModal({ isOpen, onClose }) {
             {/* Close */}
             <button
               onClick={onClose}
-              className="px-2.5 py-1.5 rounded-lg border border-neutral-300 font-mono font-bold text-xs text-neutral-600 hover:text-black hover:bg-neutral-100 transition-all"
+              className="px-2.5 py-1.5 rounded-lg border border-neutral-300 font-mono font-medium text-xs text-neutral-600 hover:text-black hover:bg-neutral-100 transition-all"
             >
               Tutup &times;
             </button>
           </div>
         </div>
 
-        {/* Scrollable Printable Document Area - Pure Black & White */}
+        {/* Scrollable Printable Document Area - Pure Black & White (No Bold) */}
         <div 
           id="printable-cv"
-          className="p-6 sm:p-10 overflow-y-auto bg-white text-neutral-900 font-sans print:p-0 print:overflow-visible"
+          className="p-6 sm:p-10 overflow-y-auto bg-white text-neutral-900 font-sans font-normal print:p-0 print:overflow-visible"
         >
           {/* Header: Nama Paling Atas */}
           <header className="text-left">
-            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-black uppercase font-mono">
+            <h1 className="text-2xl sm:text-3xl font-medium tracking-tight text-black uppercase font-mono">
               Nicholas Kenji Angesti
             </h1>
-            <p className="text-xs sm:text-sm font-semibold text-neutral-700 mt-1 font-mono tracking-wide">
+            <p className="text-xs sm:text-sm text-neutral-700 mt-1 font-mono tracking-wide">
               Computer Science Student | Aspiring Software Engineer
             </p>
 
@@ -89,11 +89,11 @@ export default function CvModal({ isOpen, onClose }) {
 
           {/* Profil Singkat */}
           <section className="text-left">
-            <h2 className="text-xs font-bold font-mono tracking-wider uppercase text-black mb-1.5">
+            <h2 className="text-xs font-medium font-mono tracking-wider uppercase text-black mb-1.5">
               Profil Singkat
             </h2>
             <p className="text-xs sm:text-[13px] leading-relaxed text-neutral-700 text-justify">
-              Mahasiswa jurusan <strong>Computer Science</strong> di Universitas Bina Nusantara dengan ketertarikan mendalam pada eksplorasi dan pengembangan aplikasi <strong>Mobile (Flutter, Kotlin)</strong> serta <strong>Full-Stack Web (React, Next.js, TypeScript, Tailwind CSS)</strong>. Berfokus pada pemahaman fundamental ilmu komputer, struktur data, dan penulisan kode yang bersih (<em>clean code</em>), dengan ambisi utama berkarier dan bertumbuh menjadi seorang <strong>Software Engineer</strong> yang adaptif dan solutif.
+              Mahasiswa jurusan Computer Science di Universitas Bina Nusantara dengan ketertarikan mendalam pada eksplorasi dan pengembangan aplikasi Mobile (Flutter, Kotlin) serta Full-Stack Web (React, Next.js, TypeScript, Tailwind CSS). Berfokus pada pemahaman fundamental ilmu komputer, struktur data, dan penulisan kode yang bersih (clean code), dengan ambisi utama berkarier dan bertumbuh menjadi seorang Software Engineer yang adaptif dan solutif.
             </p>
           </section>
 
@@ -102,21 +102,21 @@ export default function CvModal({ isOpen, onClose }) {
 
           {/* Pendidikan */}
           <section className="text-left">
-            <h2 className="text-xs font-bold font-mono tracking-wider uppercase text-black mb-2.5">
+            <h2 className="text-xs font-medium font-mono tracking-wider uppercase text-black mb-2.5">
               Pendidikan
             </h2>
 
             <div className="space-y-3">
               <div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
-                  <h3 className="text-sm font-bold text-black">
+                  <h3 className="text-sm font-medium text-black">
                     Universitas Bina Nusantara (BINUS University)
                   </h3>
                   <span className="text-xs font-mono text-neutral-500">
-                    2022 &ndash; Sekarang (Semester 5)
+                    2024 &ndash; Sekarang (Semester 5)
                   </span>
                 </div>
-                <p className="text-xs font-medium text-neutral-800">
+                <p className="text-xs text-neutral-800">
                   S1 Computer Science | Perkiraan Lulus: 2028
                 </p>
                 <p className="text-xs text-neutral-600 mt-0.5">
@@ -126,7 +126,7 @@ export default function CvModal({ isOpen, onClose }) {
 
               <div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
-                  <h3 className="text-sm font-bold text-black">
+                  <h3 className="text-sm font-medium text-black">
                     SMA Mardi Yuana Depok
                   </h3>
                   <span className="text-xs font-mono text-neutral-500">
@@ -145,7 +145,7 @@ export default function CvModal({ isOpen, onClose }) {
 
           {/* Proyek & Peran */}
           <section className="text-left">
-            <h2 className="text-xs font-bold font-mono tracking-wider uppercase text-black mb-2.5">
+            <h2 className="text-xs font-medium font-mono tracking-wider uppercase text-black mb-2.5">
               Proyek &amp; Peran Pengembangan
             </h2>
 
@@ -153,14 +153,14 @@ export default function CvModal({ isOpen, onClose }) {
               {/* Proyek 1 */}
               <div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
-                  <h3 className="text-sm font-bold text-black">
+                  <h3 className="text-sm font-medium text-black">
                     Genshin Import &ndash; Mobile E-Commerce &amp; Inventory App
                   </h3>
                   <span className="text-xs font-mono text-neutral-500">
                     Solo Project
                   </span>
                 </div>
-                <p className="text-xs font-medium text-neutral-800 mt-0.5">
+                <p className="text-xs text-neutral-800 mt-0.5">
                   Peran: Solo Full-Stack Developer | Tech: Flutter, Node.js, Express, MySQL, GitHub OAuth, JWT
                 </p>
                 <ul className="list-disc list-outside ml-4 mt-1 text-xs text-neutral-600 space-y-0.5">
@@ -173,14 +173,14 @@ export default function CvModal({ isOpen, onClose }) {
               {/* Proyek 2 */}
               <div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
-                  <h3 className="text-sm font-bold text-black">
+                  <h3 className="text-sm font-medium text-black">
                     Lern &ndash; Educational &amp; Collaborative Mobile Platform
                   </h3>
                   <span className="text-xs font-mono text-neutral-500">
                     Group Project (Tim 4 Orang)
                   </span>
                 </div>
-                <p className="text-xs font-medium text-neutral-800 mt-0.5">
+                <p className="text-xs text-neutral-800 mt-0.5">
                   Peran: Mobile Developer (Kontribusi 45%) | Tech: Flutter, NestJS, TypeScript, Prisma ORM, PostgreSQL (Supabase)
                 </p>
                 <ul className="list-disc list-outside ml-4 mt-1 text-xs text-neutral-600 space-y-0.5">
@@ -197,25 +197,25 @@ export default function CvModal({ isOpen, onClose }) {
 
           {/* Kemampuan Utama */}
           <section className="text-left">
-            <h2 className="text-xs font-bold font-mono tracking-wider uppercase text-black mb-2">
+            <h2 className="text-xs font-medium font-mono tracking-wider uppercase text-black mb-2">
               Kemampuan Utama
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1.5 text-xs">
               <div>
-                <span className="font-bold text-black block font-mono">Mobile Development:</span>
+                <span className="text-black block font-mono">Mobile Development:</span>
                 <span className="text-neutral-700">Flutter, Dart, Kotlin (Android Native)</span>
               </div>
               <div>
-                <span className="font-bold text-black block font-mono">Frontend &amp; Web:</span>
+                <span className="text-black block font-mono">Frontend &amp; Web:</span>
                 <span className="text-neutral-700">React 19, Next.js, TypeScript, Tailwind CSS, HTML5, CSS3, JavaScript</span>
               </div>
               <div>
-                <span className="font-bold text-black block font-mono">Backend &amp; Database:</span>
+                <span className="text-black block font-mono">Backend &amp; Database:</span>
                 <span className="text-neutral-700">Node.js, Express, NestJS, Prisma ORM, MySQL, PostgreSQL, Supabase</span>
               </div>
               <div>
-                <span className="font-bold text-black block font-mono">Fundamentals &amp; Tools:</span>
+                <span className="text-black block font-mono">Fundamentals &amp; Tools:</span>
                 <span className="text-neutral-700">Bahasa C, Algoritma &amp; Struktur Data, Git, GitHub, RESTful APIs</span>
               </div>
             </div>
