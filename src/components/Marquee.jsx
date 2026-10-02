@@ -2,14 +2,14 @@ import React from 'react';
 
 export default function Marquee({ isDarkMode }) {
   const items = [
-    "FULL-STACK SOFTWARE ENGINEER STUDENT",
+    "ASPIRING SOFTWARE ENGINEER",
+    "COMPUTER SCIENCE STUDENT",
+    "INTERESTED IN MOBILE & FULL-STACK",
     "REACT 19 & VITE",
-    "SOLID ARCHITECTURE",
-    "CLEAN & REFACTORED CODE",
+    "CLEAN & STRUCTURED CODE",
     "NEUMORPHIC BRUTALISM",
     "INDIVIDUAL & GROUP PROJECTS",
-    "NODE.JS & FASTAPI",
-    "THREE.JS GRAPHICS"
+    "FLUTTER & MODERN WEB"
   ];
 
   return (

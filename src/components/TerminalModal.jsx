@@ -35,7 +35,7 @@ export default function TerminalModal({ isOpen, onClose }) {
       case 'about':
         newHistory.push({
           type: 'output',
-          text: 'Nicholas Kenji - Computer Engineering Student\nSpecialized in Mobile & Full-Stack Development.\nTech Stack: Flutter, Kotlin, React, Next.js, TypeScript, Tailwind CSS, MySQL, C, HTML, CSS, JavaScript.'
+          text: 'Nicholas Kenji - Computer Science Student & Aspiring Software Engineer\nInterested in Mobile & Full-Stack Development.\nTech Stack: Flutter, Kotlin, React, Next.js, TypeScript, Tailwind CSS, MySQL, C, HTML, CSS, JavaScript.'
         });
         break;
 

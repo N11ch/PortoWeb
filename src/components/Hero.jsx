@@ -18,7 +18,7 @@ export default function Hero({ isDarkMode }) {
           {/* Top Stamp & Tagline Badge */}
           <div className="flex flex-wrap items-center gap-3">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border-3 font-mono text-xs font-bold uppercase tracking-wider bg-[#e07a5f] text-white border-[#2b2d42] shadow-[4px_4px_0px_#2b2d42]">
-              Mobile &amp; Full-Stack Engineer Student
+              Aspiring Software Engineer &bull; CS Student
             </div>
             
             {/* Retro Stamp Sticker */}
@@ -38,7 +38,7 @@ export default function Hero({ isDarkMode }) {
           <p className={`text-base sm:text-lg font-medium max-w-2xl leading-relaxed ${
             isDarkMode ? 'text-slate-300' : 'text-[#3d405b]'
           }`}>
-            Computer Engineering student focused on cross-platform mobile apps (Flutter, Kotlin) and full-stack web applications (React, Next.js, TypeScript, Tailwind CSS).
+            Computer Science student with a strong interest in mobile development (Flutter, Kotlin) and full-stack web applications (React, Next.js, TypeScript, Tailwind CSS), aspiring to build a career as a Software Engineer.
           </p>
 
           {/* Action CTAs */}
@@ -93,7 +93,7 @@ export default function Hero({ isDarkMode }) {
               <div className="h-1.5 bg-[#f2cc8f] -mx-4 -mt-4 mb-3" />
               <div className="text-2xl sm:text-3xl font-black text-[#f2cc8f] font-mono">Mobile &amp; Web</div>
               <div className={`text-[11px] font-mono font-bold uppercase ${isDarkMode ? 'text-slate-400' : 'text-[#3d405b]'}`}>
-                Tech Focus
+                Areas of Interest
               </div>
             </div>
           </div>

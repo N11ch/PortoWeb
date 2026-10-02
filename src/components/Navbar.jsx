@@ -80,7 +80,7 @@ export default function Navbar({ isDarkMode, setIsDarkMode, onOpenTerminal, acti
                 style={{ color: currentPalette.primary }}
                 className="font-mono text-[10px] uppercase font-bold tracking-wider"
               >
-                Mobile &amp; Full-Stack Developer
+                Aspiring Software Engineer
               </span>
             </div>
           </button>

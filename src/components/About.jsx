@@ -28,7 +28,7 @@ export default function About({ isDarkMode, onSelectSkillFilter, selectedSkill }
           <h2 className={`text-4xl sm:text-5xl font-black tracking-tight ${
             isDarkMode ? 'text-white' : 'text-[#2b2d42]'
           }`}>
-            Mobile &amp; Full-Stack Mindset
+            Aspiring Software Engineer
           </h2>
         </div>
       </ScrollReveal>
@@ -54,14 +54,13 @@ export default function About({ isDarkMode, onSelectSkillFilter, selectedSkill }
                 isDarkMode ? 'text-slate-300' : 'text-[#3d405b]'
               }`}>
                 <p>
-                  Hello! I am Nicholas Kenji, a Computer Engineering student specializing in Mobile &amp; Full-Stack software development. 
-                  I focus on building cross-platform mobile apps using Flutter &amp; Kotlin alongside modern web applications with React, Next.js, TypeScript, and Tailwind CSS.
+                  Hello! I am Nicholas Kenji, a Computer Science student with a passionate interest in Mobile &amp; Full-Stack software development. Rather than specializing in just one narrow field, I enjoy exploring and building across both cross-platform mobile apps (Flutter &amp; Kotlin) and modern web applications (React, Next.js, TypeScript, and Tailwind CSS).
                 </p>
                 <p>
-                  I value writing clean code, building responsive interfaces, and applying foundational programming principles across C, JavaScript, and HTML/CSS.
+                  At my core, my ambition is to grow into a versatile Software Engineer. I focus on developing strong computer science fundamentals, writing clean and maintainable code, and understanding end-to-end software architecture.
                 </p>
                 <p>
-                  Whether developing mobile applications solo or collaborating with engineering peers on full-stack projects, I strive to deliver functional UI/UX design and well-structured codebases.
+                  Whether developing mobile applications independently or collaborating on full-stack team projects, I strive to deliver functional UI/UX design, reliable logic, and well-structured codebases.
                 </p>
               </div>
 
@@ -105,10 +104,10 @@ export default function About({ isDarkMode, onSelectSkillFilter, selectedSkill }
                   <div className="absolute left-1 top-1.5 w-5 h-5 rounded-full bg-[#e07a5f] border-2 border-[#2b2d42]" />
                   <span className="font-mono text-xs font-extrabold uppercase text-[#e07a5f]">Current</span>
                   <h4 className={`text-base font-black ${isDarkMode ? 'text-white' : 'text-[#2b2d42]'}`}>
-                    Computer Engineering Student
+                    Computer Science Student
                   </h4>
                   <p className={`text-sm ${isDarkMode ? 'text-slate-400' : 'text-[#3d405b]'}`}>
-                    Focusing on Mobile Development, Full-Stack Web Systems, Data Structures, and C Programming.
+                    Pursuing Computer Science fundamentals, Software Engineering principles, Data Structures, and actively exploring Mobile &amp; Full-Stack systems.
                   </p>
                 </div>
 

@@ -39,7 +39,7 @@ export default function Contact({ isDarkMode }) {
           <p className={`text-base font-medium max-w-xl mx-auto ${
             isDarkMode ? 'text-slate-400' : 'text-[#3d405b]'
           }`}>
-            Interested in mobile &amp; full-stack engineering, project collaborations, or hiring opportunities? Reach out directly via email or connect across social channels.
+            Open to software engineering opportunities, mobile &amp; full-stack discussions, or project collaborations. Reach out directly via email or connect across social channels.
           </p>
         </div>
       </ScrollReveal>
