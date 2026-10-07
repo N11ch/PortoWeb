@@ -1,4 +1,5 @@
 import React from 'react';
+import profilePic from '../assets/PP_Kacamata.jpg';
 
 export default function Hero({ isDarkMode, onOpenCv }) {
   const scrollTo = (id) => {
@@ -132,9 +133,15 @@ export default function Hero({ isDarkMode, onOpenCv }) {
               <span className="w-2.5 h-2.5 rounded-full bg-[#81b29a] animate-ping" />
             </div>
 
-            <div className="relative w-full h-[calc(100%-28px)] rounded-xl overflow-hidden border-2 border-[#2b2d42]">
-              {/* Stylish Brutalist Avatar Placeholder */}
-              <div className={`w-full h-full flex flex-col items-center justify-center p-6 text-center font-mono select-none ${
+            <div className="relative w-full h-[calc(100%-28px)] rounded-xl overflow-hidden border-2 border-[#2b2d42] bg-[#2b2d42] group">
+              <img
+                src={profilePic}
+                alt="Nicholas Kenji"
+                className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+              />
+
+              {/* Fallback if image fails to load */}
+              <div className={`w-full h-full hidden flex-col items-center justify-center p-6 text-center font-mono select-none ${
                 isDarkMode ? 'bg-[#232630] text-[#f2cc8f]' : 'bg-[#f0e9df] text-[#e07a5f]'
               }`}>
                 <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl border-3 border-[#2b2d42] bg-[#e07a5f] text-white flex items-center justify-center text-2xl sm:text-3xl font-black shadow-[4px_4px_0px_#2b2d42] mb-3">
@@ -146,6 +153,15 @@ export default function Hero({ isDarkMode, onOpenCv }) {
                 <div className="text-[10px] font-bold opacity-75 mt-1">
                   Aspiring Software Engineer
                 </div>
+              </div>
+
+              {/* Neo-brutalist Bottom Badge Overlay */}
+              <div className="absolute bottom-2.5 left-2.5 right-2.5 bg-[#2b2d42]/85 backdrop-blur-sm px-3 py-1.5 rounded-lg border-2 border-[#2b2d42] shadow-[2px_2px_0px_rgba(0,0,0,0.25)] flex items-center justify-between text-white font-mono text-[10px]">
+                <span className="font-extrabold tracking-wide truncate">Nicholas Kenji</span>
+                <span className="text-[#81b29a] font-black uppercase text-[9px] flex items-center gap-1 shrink-0">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#81b29a] animate-pulse" />
+                  Online
+                </span>
               </div>
             </div>
           </div>

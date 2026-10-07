@@ -1,6 +1,7 @@
 import React from 'react';
 import { skillsData } from '../data/projects';
 import ScrollReveal from './ScrollReveal';
+import profilePic from '../assets/PP_Kacamata.jpg';
 
 export default function About({ isDarkMode, onSelectSkillFilter, selectedSkill }) {
   const categories = ["All", "Mobile", "Frontend", "Backend & Database", "Languages"];
@@ -44,11 +45,25 @@ export default function About({ isDarkMode, onSelectSkillFilter, selectedSkill }
                 ? 'bg-[#313543] border-[#1a1c23] shadow-[8px_8px_0px_#1a1c23]' 
                 : 'bg-[#fffdf9] border-[#2b2d42] shadow-[8px_8px_0px_#2b2d42]'
             }`}>
-              <h3 className={`text-2xl font-black mb-4 font-mono ${
-                isDarkMode ? 'text-[#f2cc8f]' : 'text-[#e07a5f]'
-              }`}>
-                About Nicholas Kenji
-              </h3>
+              <div className="flex items-center gap-4 mb-5">
+                <img
+                  src={profilePic}
+                  alt="Nicholas Kenji"
+                  className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl object-cover object-center border-2 border-[#2b2d42] shadow-[3px_3px_0px_#2b2d42] shrink-0"
+                />
+                <div>
+                  <h3 className={`text-2xl font-black font-mono leading-tight ${
+                    isDarkMode ? 'text-[#f2cc8f]' : 'text-[#e07a5f]'
+                  }`}>
+                    About Nicholas Kenji
+                  </h3>
+                  <p className={`text-xs font-mono font-bold mt-0.5 ${
+                    isDarkMode ? 'text-slate-400' : 'text-[#3d405b]'
+                  }`}>
+                    CS Student &bull; Aspiring Software Engineer
+                  </p>
+                </div>
+              </div>
               
               <div className={`space-y-4 text-base font-medium leading-relaxed ${
                 isDarkMode ? 'text-slate-300' : 'text-[#3d405b]'
