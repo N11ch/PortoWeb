@@ -7,7 +7,6 @@ import Projects from './components/Projects';
 import ProjectModal from './components/ProjectModal';
 import Contact from './components/Contact';
 import TerminalModal from './components/TerminalModal';
-import CvModal from './components/CvModal';
 import InteractiveBackground from './components/InteractiveBackground';
 import { palettes } from './data/palettes';
 
@@ -17,7 +16,6 @@ function App() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedSkillFilter, setSelectedSkillFilter] = useState(null);
   const [isTerminalOpen, setIsTerminalOpen] = useState(false);
-  const [isCvOpen, setIsCvOpen] = useState(false);
 
   const currentPalette = palettes[activePaletteId] || palettes.terracotta;
 
@@ -39,7 +37,6 @@ function App() {
         isDarkMode={isDarkMode}
         setIsDarkMode={setIsDarkMode}
         onOpenTerminal={() => setIsTerminalOpen(true)}
-        onOpenCv={() => setIsCvOpen(true)}
         activePaletteId={activePaletteId}
         setActivePaletteId={setActivePaletteId}
       />
@@ -48,7 +45,6 @@ function App() {
       <Hero 
         isDarkMode={isDarkMode} 
         currentPalette={currentPalette} 
-        onOpenCv={() => setIsCvOpen(true)}
       />
 
       {/* Infinite Retro Marquee Ticker */}
@@ -88,13 +84,6 @@ function App() {
       <TerminalModal
         isOpen={isTerminalOpen}
         onClose={() => setIsTerminalOpen(false)}
-      />
-
-      {/* Curriculum Vitae Modal */}
-      <CvModal
-        isOpen={isCvOpen}
-        onClose={() => setIsCvOpen(false)}
-        isDarkMode={isDarkMode}
       />
 
     </div>
