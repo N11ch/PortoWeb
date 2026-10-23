@@ -130,8 +130,8 @@ export default function Hero({ isDarkMode }) {
           onClick={() => scrollTo('about')}
           theme={isDarkMode ? 'dark' : 'light'}
           size="medium"
-          altitude={125}
-          hoverTime={2.0}
+          altitude={100}
+          hoverTime={0.8}
           jets={2}
           thrusters={true}
           trigger="hover"

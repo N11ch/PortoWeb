@@ -1325,12 +1325,6 @@ function createEngine({ root, canvas, button, cursor, ramp, props }) {
         s.phase = 'landed';
         s.pt = 0;
         s.boost = false;
-        if (s.pendingClick) {
-          s.pendingClick = false;
-          setTimeout(() => {
-            if (props.current.onClick) props.current.onClick();
-          }, 450);
-        }
       }
     } else if (s.phase === 'landed') {
       total = 0;
@@ -1561,6 +1555,10 @@ function createEngine({ root, canvas, button, cursor, ramp, props }) {
     s.pressed = false;
     s.suppress = true;
     s.pendingClick = false;
+    if (clickTimer) {
+      clearTimeout(clickTimer);
+      clickTimer = 0;
+    }
     s.boost = false;
     delete button.dataset.pressed;
     root.dataset.dragging = '';
@@ -1653,6 +1651,17 @@ function createEngine({ root, canvas, button, cursor, ramp, props }) {
     }
   };
 
+  let clickTimer = 0;
+  const scheduleClickScroll = (delayMs = 950) => {
+    if (clickTimer) clearTimeout(clickTimer);
+    clickTimer = setTimeout(() => {
+      clickTimer = 0;
+      if (!s.drag && props.current.onClick) {
+        props.current.onClick();
+      }
+    }, delayMs);
+  };
+
   const onClick = e => {
     if (s.suppress) {
       s.suppress = false;
@@ -1661,17 +1670,18 @@ function createEngine({ root, canvas, button, cursor, ramp, props }) {
       return;
     }
     if (s.phase !== 'rest') {
-      s.pendingClick = true;
-      if (s.phase === 'hover') s.hold = Math.min(s.hold, s.pt + 0.35);
+      if (s.phase === 'hover') s.hold = Math.min(s.hold, s.pt + 0.15);
+      scheduleClickScroll(750);
       return;
     }
     if (rampOn()) {
       ride();
-      s.pendingClick = true;
+      scheduleClickScroll(1100);
       return;
     }
     if (launch()) {
-      s.pendingClick = true;
+      s.hold = 0.2;
+      scheduleClickScroll(950);
       if (s.pointer.type === 'mouse' && s.pointer.in && s.hover) {
         s.attached = Boolean(props.current.carryCursor);
       }
