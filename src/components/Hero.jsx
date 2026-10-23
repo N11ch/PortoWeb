@@ -1,5 +1,6 @@
 import React from 'react';
 import LanyardCard from './LanyardCard';
+import BubbleText from './BubbleText';
 
 export default function Hero({ isDarkMode }) {
   const scrollTo = (id) => {
@@ -28,12 +29,8 @@ export default function Hero({ isDarkMode }) {
             </div>
           </div>
 
-          {/* Main Headline with Retro Layered Highlights */}
-          <h1 className={`text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-none ${
-            isDarkMode ? 'text-white' : 'text-[#2b2d42]'
-          }`}>
-            Building <span className="px-2 py-0.5 rounded-lg bg-[#e07a5f] text-white border-2 border-[#2b2d42] shadow-[3px_3px_0px_#2b2d42] inline-block rotate-[-1deg]">Full-Stack</span> &amp; Mobile Products.
-          </h1>
+          {/* Main Headline with Interactive Bubble Text & Retro Highlight */}
+          <BubbleText isDarkMode={isDarkMode} />
 
           {/* Subtitle / Bio summary */}
           <p className={`text-base sm:text-lg font-medium max-w-2xl leading-relaxed ${
