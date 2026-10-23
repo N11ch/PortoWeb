@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useEffect, useRef } from 'react';
 import './FlyingButton.css';
@@ -675,6 +675,7 @@ function createEngine({ root, canvas, button, cursor, ramp, props }) {
     press: null,
     drag: null,
     suppress: false,
+    pendingClick: false,
     lastC: null,
     lastTh: 0,
     quiet: 0,
@@ -1324,6 +1325,12 @@ function createEngine({ root, canvas, button, cursor, ramp, props }) {
         s.phase = 'landed';
         s.pt = 0;
         s.boost = false;
+        if (s.pendingClick) {
+          s.pendingClick = false;
+          setTimeout(() => {
+            if (props.current.onClick) props.current.onClick();
+          }, 450);
+        }
       }
     } else if (s.phase === 'landed') {
       total = 0;
@@ -1553,6 +1560,7 @@ function createEngine({ root, canvas, button, cursor, ramp, props }) {
     s.attached = false;
     s.pressed = false;
     s.suppress = true;
+    s.pendingClick = false;
     s.boost = false;
     delete button.dataset.pressed;
     root.dataset.dragging = '';
@@ -1632,9 +1640,16 @@ function createEngine({ root, canvas, button, cursor, ramp, props }) {
     s.pressed = false;
     delete button.dataset.pressed;
     if (s.carry && s.hover) {
-      if (s.phase === 'rest' && rampOn()) ride();
-      else if (props.current.trigger === 'click' && launch()) s.attached = Boolean(props.current.carryCursor);
-      if (props.current.onClick) props.current.onClick(e);
+      if (s.phase === 'rest' && rampOn()) {
+        ride();
+        s.pendingClick = true;
+      } else if (s.phase === 'rest' && launch()) {
+        s.attached = Boolean(props.current.carryCursor);
+        s.pendingClick = true;
+      } else if (s.phase !== 'rest') {
+        s.pendingClick = true;
+        if (s.phase === 'hover') s.hold = Math.min(s.hold, s.pt + 0.35);
+      }
     }
   };
 
@@ -1645,13 +1660,23 @@ function createEngine({ root, canvas, button, cursor, ramp, props }) {
       e.preventDefault();
       return;
     }
-    if (s.phase !== 'rest') return;
-    if (rampOn()) {
-      ride();
+    if (s.phase !== 'rest') {
+      s.pendingClick = true;
+      if (s.phase === 'hover') s.hold = Math.min(s.hold, s.pt + 0.35);
       return;
     }
-    if (launch() && s.pointer.type === 'mouse' && s.pointer.in && s.hover) {
-      s.attached = Boolean(props.current.carryCursor);
+    if (rampOn()) {
+      ride();
+      s.pendingClick = true;
+      return;
+    }
+    if (launch()) {
+      s.pendingClick = true;
+      if (s.pointer.type === 'mouse' && s.pointer.in && s.hover) {
+        s.attached = Boolean(props.current.carryCursor);
+      }
+    } else if (props.current.onClick) {
+      props.current.onClick(e);
     }
   };
 
@@ -2114,7 +2139,6 @@ export default function FlyingButton({
         ref={buttonRef}
         type="button"
         className="flying-button__craft"
-        onClick={e => propsRef.current.onClick && propsRef.current.onClick(e)}
       >
         <span className="flying-button__face" aria-hidden="true" />
         <span className="flying-button__label">{children}</span>
