@@ -1,5 +1,5 @@
 import React from 'react';
-import profilePic from '../assets/PP_Kacamata.jpg';
+import LanyardCard from './LanyardCard';
 
 export default function Hero({ isDarkMode }) {
   const scrollTo = (id) => {
@@ -101,61 +101,9 @@ export default function Hero({ isDarkMode }) {
 
         </div>
 
-        {/* Right Column: Profile Picture Card with Floating Tech Badges */}
-        <div className="lg:col-span-5 flex justify-center lg:justify-end relative">
-          
-          {/* Floating Retro Tech Badges */}
-          <div className="hidden sm:block absolute -top-4 -left-4 z-20 px-3 py-1.5 rounded-xl border-2 font-mono text-[11px] font-black uppercase bg-[#81b29a] text-white border-[#2b2d42] shadow-[3px_3px_0px_#2b2d42] rotate-[-4deg] animate-pulse">
-            React &amp; Full-Stack
-          </div>
-
-          <div className="hidden sm:block absolute -bottom-4 -right-4 z-20 px-3 py-1.5 rounded-xl border-2 font-mono text-[11px] font-black uppercase bg-[#f2cc8f] text-[#2b2d42] border-[#2b2d42] shadow-[3px_3px_0px_#2b2d42] rotate-[3deg]">
-            Flutter &amp; Mobile
-          </div>
-
-          <div className={`relative w-64 h-64 sm:w-80 sm:h-80 max-w-full rounded-2xl border-4 p-3 transition-transform duration-300 hover:scale-[1.02] ${
-            isDarkMode 
-              ? 'bg-[#313543] border-[#1a1c23] shadow-[8px_8px_0px_#1a1c23] sm:shadow-[10px_10px_0px_#1a1c23]' 
-              : 'bg-[#fffdf9] border-[#2b2d42] shadow-[8px_8px_0px_#2b2d42] sm:shadow-[10px_10px_0px_#2b2d42]'
-          }`}>
-            {/* Top Frame Header Bar */}
-            <div className="flex items-center justify-between pb-2 mb-2 border-b-2 border-[#e07a5f]/40 font-mono text-[10px] font-bold uppercase tracking-wider text-[#e07a5f]">
-              <span>SYS_PROFILE // NICHOLAS</span>
-              <span className="w-2.5 h-2.5 rounded-full bg-[#81b29a] animate-ping" />
-            </div>
-
-            <div className="relative w-full h-[calc(100%-28px)] rounded-xl overflow-hidden border-2 border-[#2b2d42] bg-[#2b2d42] group">
-              <img
-                src={profilePic}
-                alt="Nicholas Kenji"
-                className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
-              />
-
-              {/* Fallback if image fails to load */}
-              <div className={`w-full h-full hidden flex-col items-center justify-center p-6 text-center font-mono select-none ${
-                isDarkMode ? 'bg-[#232630] text-[#f2cc8f]' : 'bg-[#f0e9df] text-[#e07a5f]'
-              }`}>
-                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl border-3 border-[#2b2d42] bg-[#e07a5f] text-white flex items-center justify-center text-2xl sm:text-3xl font-black shadow-[4px_4px_0px_#2b2d42] mb-3">
-                  NK
-                </div>
-                <div className={`text-xs font-black uppercase tracking-wider ${isDarkMode ? 'text-white' : 'text-[#2b2d42]'}`}>
-                  Nicholas Kenji
-                </div>
-                <div className="text-[10px] font-bold opacity-75 mt-1">
-                  Aspiring Software Engineer
-                </div>
-              </div>
-
-              {/* Neo-brutalist Bottom Badge Overlay */}
-              <div className="absolute bottom-2.5 left-2.5 right-2.5 bg-[#2b2d42]/85 backdrop-blur-sm px-3 py-1.5 rounded-lg border-2 border-[#2b2d42] shadow-[2px_2px_0px_rgba(0,0,0,0.25)] flex items-center justify-between text-white font-mono text-[10px]">
-                <span className="font-extrabold tracking-wide truncate">Nicholas Kenji</span>
-                <span className="text-[#81b29a] font-black uppercase text-[9px] flex items-center gap-1 shrink-0">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#81b29a] animate-pulse" />
-                  Online
-                </span>
-              </div>
-            </div>
-          </div>
+        {/* Right Column: Interactive Physics Lanyard ID Card */}
+        <div className="lg:col-span-5 flex justify-center items-start relative -mt-6 lg:-mt-10">
+          <LanyardCard isDarkMode={isDarkMode} />
         </div>
 
       </div>
