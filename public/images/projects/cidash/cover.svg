@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F17" />
+      <stop offset="100%" stop-color="#151B26" />
+    </linearGradient>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EA2845" />
+      <stop offset="100%" stop-color="#B3122E" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2A3344" stroke-width="1" stroke-opacity="0.45" />
+    </pattern>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="675" fill="url(#bgGrad)" />
+  <rect width="1200" height="675" fill="url(#grid)" />
+
+  <!-- Decorative Glow -->
+  <circle cx="950" cy="180" r="240" fill="#EA2845" opacity="0.12" />
+  <circle cx="200" cy="550" r="220" fill="#34D399" opacity="0.07" />
+
+  <!-- Left Content Column -->
+  <g transform="translate(72, 88)">
+    <!-- Invite-Only Badge -->
+    <rect x="0" y="0" width="290" height="40" rx="10" fill="#EA2845" fill-opacity="0.15" stroke="#EA2845" stroke-width="2" />
+    <circle cx="22" cy="20" r="6" fill="#EA2845" />
+    <text x="38" y="25" fill="#F8FAFC" font-family="monospace, sans-serif" font-size="14" font-weight="800" letter-spacing="1.5">INVITE-ONLY FITNESS PWA</text>
+
+    <!-- Main Title -->
+    <text x="0" y="120" fill="#F8FAFC" font-family="sans-serif" font-size="76" font-weight="900" letter-spacing="-2">CIDASH</text>
+    <rect x="295" y="72" width="136" height="42" rx="8" fill="url(#brandGrad)" />
+    <text x="313" y="99" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="18" font-weight="800">RUN8MORN</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="168" fill="#A8B3C4" font-family="sans-serif" font-size="22" font-weight="600">Social Gamified Fitness Tracker for Private Circles</text>
+
+    <!-- Feature Pills -->
+    <g transform="translate(0, 210)">
+      <rect x="0" y="0" width="240" height="76" rx="14" fill="#151B26" stroke="#2A3344" stroke-width="2" />
+      <text x="20" y="30" fill="#EA2845" font-family="monospace, sans-serif" font-size="13" font-weight="800">P2P BOMB MISSION</text>
+      <text x="20" y="55" fill="#F8FAFC" font-family="sans-serif" font-size="18" font-weight="700">Coin Stake &amp; Shield</text>
+
+      <rect x="258" y="0" width="240" height="76" rx="14" fill="#151B26" stroke="#2A3344" stroke-width="2" />
+      <text x="278" y="30" fill="#34D399" font-family="monospace, sans-serif" font-size="13" font-weight="800">LIVE GROUP RUN</text>
+      <text x="278" y="55" fill="#F8FAFC" font-family="sans-serif" font-size="18" font-weight="700">5s Sync &amp; Pace Gap</text>
+
+      <rect x="0" y="94" width="240" height="76" rx="14" fill="#151B26" stroke="#2A3344" stroke-width="2" />
+      <text x="20" y="124" fill="#FBBF24" font-family="monospace, sans-serif" font-size="13" font-weight="800">GPS + ANTI-CHEAT</text>
+      <text x="20" y="149" fill="#F8FAFC" font-family="sans-serif" font-size="18" font-weight="700">Haversine Verified</text>
+
+      <rect x="258" y="94" width="240" height="76" rx="14" fill="#151B26" stroke="#2A3344" stroke-width="2" />
+      <text x="278" y="124" fill="#F8FAFC" font-family="monospace, sans-serif" font-size="13" font-weight="800">NEO-BRUTAL SHARE</text>
+      <text x="278" y="149" fill="#A8B3C4" font-family="sans-serif" font-size="18" font-weight="700">1080x1920 Track Card</text>
+    </g>
+
+    <!-- Tech Stack Footer Pills -->
+    <g transform="translate(0, 425)">
+      <rect x="0" y="0" width="110" height="36" rx="8" fill="#1E2634" stroke="#2A3344" stroke-width="1.5" />
+      <text x="18" y="23" fill="#61DAFB" font-family="monospace, sans-serif" font-size="13" font-weight="700">React PWA</text>
+
+      <rect x="122" y="0" width="100" height="36" rx="8" fill="#1E2634" stroke="#2A3344" stroke-width="1.5" />
+      <text x="142" y="23" fill="#EA2845" font-family="monospace, sans-serif" font-size="13" font-weight="700">NestJS 12</text>
+
+      <rect x="234" y="0" width="105" height="36" rx="8" fill="#1E2634" stroke="#2A3344" stroke-width="1.5" />
+      <text x="252" y="23" fill="#34D399" font-family="monospace, sans-serif" font-size="13" font-weight="700">Leaflet</text>
+
+      <rect x="351" y="0" width="145" height="36" rx="8" fill="#1E2634" stroke="#2A3344" stroke-width="1.5" />
+      <text x="369" y="23" fill="#F8FAFC" font-family="monospace, sans-serif" font-size="13" font-weight="700">Prisma + Supabase</text>
+    </g>
+  </g>
+
+  <!-- Right Column: Mock Mobile PWA & Track Map Card -->
+  <g transform="translate(680, 64)">
+    <!-- Card Shadow -->
+    <rect x="12" y="12" width="430" height="545" rx="28" fill="#000000" opacity="0.55" />
+    <!-- Main Mobile Card -->
+    <rect x="0" y="0" width="430" height="545" rx="28" fill="#151B26" stroke="#2A3344" stroke-width="3" />
+
+    <!-- Top Coin & Circle Header -->
+    <rect x="24" y="24" width="382" height="68" rx="16" fill="url(#brandGrad)" />
+    <text x="44" y="52" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="12" font-weight="700" opacity="0.9">ACTIVE CIRCLE // SEASON Q3</text>
+    <text x="44" y="76" fill="#FFFFFF" font-family="sans-serif" font-size="20" font-weight="800">RUN8MORN &bull; 4 Members</text>
+    <rect x="302" y="38" width="88" height="38" rx="10" fill="#0B0F17" fill-opacity="0.35" />
+    <text x="318" y="62" fill="#FBBF24" font-family="monospace, sans-serif" font-size="15" font-weight="800">250 COIN</text>
+
+    <!-- GPS Route Map Preview Box -->
+    <rect x="24" y="110" width="382" height="230" rx="18" fill="#0B0F17" stroke="#2A3344" stroke-width="2" />
+    <!-- Map Grid Lines -->
+    <line x1="24" y1="165" x2="406" y2="165" stroke="#1E2634" stroke-width="1.5" />
+    <line x1="24" y1="225" x2="406" y2="225" stroke="#1E2634" stroke-width="1.5" />
+    <line x1="24" y1="285" x2="406" y2="285" stroke="#1E2634" stroke-width="1.5" />
+    <line x1="140" y1="110" x2="140" y2="340" stroke="#1E2634" stroke-width="1.5" />
+    <line x1="270" y1="110" x2="270" y2="340" stroke="#1E2634" stroke-width="1.5" />
+
+    <!-- GPS Polyline Route -->
+    <path d="M 68 290 Q 115 240, 150 260 T 235 195 T 315 210 T 365 148" fill="none" stroke="#EA2845" stroke-width="6" stroke-linecap="round" />
+    <circle cx="68" cy="290" r="8" fill="#34D399" stroke="#0B0F17" stroke-width="3" />
+    <circle cx="365" cy="148" r="9" fill="#EA2845" stroke="#FFFFFF" stroke-width="3" />
+
+    <!-- Live Tag on Map -->
+    <rect x="40" y="126" width="136" height="28" rx="8" fill="#151B26" stroke="#34D399" stroke-width="1.5" />
+    <circle cx="56" cy="140" r="5" fill="#34D399" />
+    <text x="68" y="145" fill="#34D399" font-family="monospace, sans-serif" font-size="11" font-weight="800">ANTI-CHEAT OK</text>
+
+    <!-- Metrics Row -->
+    <g transform="translate(24, 358)">
+      <rect x="0" y="0" width="118" height="78" rx="14" fill="#1E2634" />
+      <text x="16" y="28" fill="#A8B3C4" font-family="monospace, sans-serif" font-size="11" font-weight="700">DISTANCE</text>
+      <text x="16" y="58" fill="#F8FAFC" font-family="sans-serif" font-size="24" font-weight="800">5.42 km</text>
+
+      <rect x="132" y="0" width="118" height="78" rx="14" fill="#1E2634" />
+      <text x="148" y="28" fill="#A8B3C4" font-family="monospace, sans-serif" font-size="11" font-weight="700">AVG PACE</text>
+      <text x="148" y="58" fill="#F8FAFC" font-family="sans-serif" font-size="24" font-weight="800">5'18"/km</text>
+
+      <rect x="264" y="0" width="118" height="78" rx="14" fill="#1E2634" />
+      <text x="280" y="28" fill="#A8B3C4" font-family="monospace, sans-serif" font-size="11" font-weight="700">REWARD</text>
+      <text x="280" y="58" fill="#34D399" font-family="sans-serif" font-size="24" font-weight="800">+120 RP</text>
+    </g>
+
+    <!-- Bomb Mission Banner -->
+    <rect x="24" y="452" width="382" height="66" rx="14" fill="#1E2634" stroke="#EA2845" stroke-width="2" />
+    <text x="44" y="480" fill="#EA2845" font-family="monospace, sans-serif" font-size="12" font-weight="800">BOMB MISSION COMPLETED</text>
+    <text x="44" y="503" fill="#F8FAFC" font-family="sans-serif" font-size="15" font-weight="700">5K Morning Dash &bull; +50 Coins Won</text>
+    <rect x="308" y="469" width="80" height="32" rx="8" fill="#059669" />
+    <text x="323" y="490" fill="#FFFFFF" font-family="monospace, sans-serif" font-size="12" font-weight="800">CLAIMED</text>
+  </g>
+</svg>

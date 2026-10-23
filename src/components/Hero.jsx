@@ -68,7 +68,7 @@ export default function Hero({ isDarkMode }) {
                 : 'bg-[#fffdf9] border-[#2b2d42] shadow-[4px_4px_0px_#2b2d42]'
             }`}>
               <div className="h-1.5 bg-[#e07a5f] -mx-2.5 sm:-mx-4 -mt-2.5 sm:-mt-4 mb-2.5 sm:mb-3" />
-              <div className="text-xl sm:text-3xl font-black text-[#e07a5f] font-mono">2</div>
+              <div className="text-xl sm:text-3xl font-black text-[#e07a5f] font-mono">3</div>
               <div className={`text-[10px] sm:text-[11px] font-mono font-bold uppercase ${isDarkMode ? 'text-slate-400' : 'text-[#3d405b]'}`}>
                 Featured Apps
               </div>

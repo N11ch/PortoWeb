@@ -58,6 +58,44 @@ export const projectsData = [
       "Structured feature-first mobile folder hierarchy and named routes navigation using Navigator in Flutter.",
       "Connected mobile HTTP services with NestJS REST endpoints using JWT authentication state."
     ]
+  },
+  {
+    id: "proj-cidash",
+    title: "Cidash - Social Gamified Fitness Tracker (Invite-Only)",
+    category: "group",
+    tagline: "Invite-only social gamified fitness PWA with Private Circles, P2P Bomb Missions, Live Group Run, and GPS anti-cheat verification.",
+    overview: "Cidash is an interactive fitness Progressive Web App (PWA) designed to overcome workout social anxiety on public platforms. Users exercise casually within trusted friend circles using an 8-character Invite Code system, run together synchronously via Live Group Run, challenge friends with coin-wagered P2P Bomb Missions, and compete fairly with quarterly (3-month) Season Resets.",
+    problemStatement: "Public fitness trackers often trigger social anxiety and comparison pressure, while lacking engaging peer-to-peer gamification and reliable anti-cheat verification for casual friend groups.",
+    roleDescription: "Full-Stack Developer. Built the React 18 PWA frontend (design token theming, GPS tracker with desktop simulation, Leaflet maps, Neo-Brutalist 1080x1920 Share Card) and NestJS 12 REST API modules (Squads/Circles, P2P Quests with cron expiration, Haversine Anti-Cheat, and Prisma/Supabase integration with offline fallback).",
+    teamSize: 4,
+    contributionPercentage: 50,
+    technologies: [
+      "React PWA",
+      "TypeScript",
+      "Vite 5",
+      "Tailwind CSS",
+      "Leaflet",
+      "NestJS",
+      "Prisma ORM",
+      "PostgreSQL / Supabase"
+    ],
+    coverImage: "/images/projects/cidash/cover.svg",
+    galleryImages: [
+      "/images/projects/cidash/cover.svg"
+    ],
+    liveUrl: "https://github.com/N11ch/Cidash",
+    githubUrl: "https://github.com/N11ch/Cidash",
+    featured: true,
+    keyFeatures: [
+      "Private Circle (Invite-Only): Create or join exclusive groups via unique 8-character codes (e.g., RUN8MORN) with Captain member management (kick/leave) and quarterly Season Resets.",
+      "P2P Custom Quest & Bomb Mission: Challenge circle friends with coin stakes (5–100 coins) & Rank Points, or deflect penalties using Shield Tickets.",
+      "Real-Time GPS & Server-Side Anti-Cheat: Live tracking of route, distance, pace, and calories with Haversine verification, speed-limit checks, and coordinate jump detection.",
+      "Live Group Run & Social Track Map Card: Synchronous running rooms with 5-second position sync & distance gaps, plus 1080x1920 Neo-Brutalist PNG share cards with QR invite codes."
+    ],
+    challengesLearnings: [
+      "Engineered resilient GPS tracking in React using Geolocation API, sessionStorage persistence, and a Desktop Simulation mode alongside server-side Haversine anti-cheat validation.",
+      "Implemented CSS variable design tokens for seamless light/dark mode switching while locking brand gradients on exported 1080x1920 PNG social share cards."
+    ]
   }
 ];
 
