@@ -125,7 +125,7 @@ export default function Hero({ isDarkMode }) {
       </div>
 
       {/* Scroll Down Indicator with React Bits FlyingButton */}
-      <div className="w-full max-w-xl h-[200px] mx-auto -mt-4 relative z-20">
+      <div className="w-full max-w-4xl h-[220px] mx-auto -mt-4 relative z-20">
         <FlyingButton
           onClick={() => scrollTo('about')}
           theme={isDarkMode ? 'dark' : 'light'}
@@ -136,10 +136,12 @@ export default function Hero({ isDarkMode }) {
           thrusters={true}
           trigger="hover"
           carryCursor={false}
+          smoke={0.75}
           buttonColor="#e07a5f"
           textColor="#ffffff"
           thrustColor="#f2cc8f"
-          style={{ minHeight: '200px' }}
+          smokeColor={isDarkMode ? '#94a3b8' : '#cbd5e1'}
+          style={{ minHeight: '220px' }}
         >
           <span className="inline-flex items-center gap-2 font-mono text-xs font-black uppercase tracking-widest">
             <span>Explore Details</span>

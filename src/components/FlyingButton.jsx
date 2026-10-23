@@ -537,15 +537,21 @@ void main() {
 
   vec3 jlNear = jl * 0.35 + uThrust * colNear / max(Dt, 1e-4) * 0.9;
   jl += uThrust * colHot / max(Dt, 1e-4) * 0.9;
+  float edgeX = smoothstep(0.0, 0.24, vUv.x) * smoothstep(0.0, 0.24, 1.0 - vUv.x);
+  float edgeTop = smoothstep(0.0, 0.26, 1.0 - vUv.y);
+  float edgeBottom = smoothstep(0.0, 0.16, vUv.y);
+  float edgeFade = pow(edgeX * edgeTop * edgeBottom, 1.15);
+  alpha *= edgeFade * 0.72;
+  core *= edgeFade;
   if (uLightTheme > 0.5) {
     float shade = dot(lit + jl * 0.8, vec3(0.3333)) * uLight2.z;
     vec3 ink = mix(uShade, uSmoke, smoothstep(0.15, 1.2, shade));
-    alpha = 1.0 - pow(1.0 - alpha, 1.25);
+    alpha = (1.0 - pow(1.0 - alpha, 1.15)) * edgeFade;
     ink = mix(ink, uThrust, clamp(dot(jlNear, vec3(0.3333)) * 0.5, 0.0, 0.3));
-    float ca = clamp(max(core.r, max(core.g, core.b)) * 0.85, 0.0, 1.0);
+    float ca = clamp(max(core.r, max(core.g, core.b)) * 0.85, 0.0, 1.0) * edgeFade;
     vec3 coreInk = mix(uThrust, vec3(1.0), 0.35 * smoothstep(0.7, 1.0, ca));
     vec3 lc = ink * alpha * (1.0 - ca) + coreInk * ca;
-    float la = alpha + ca * (1.0 - alpha);
+    float la = (alpha + ca * (1.0 - alpha)) * edgeFade;
     outColor = vec4(lc, la);
     return;
   }
@@ -553,8 +559,8 @@ void main() {
   smoke = mix(smoke / (1.0 + 0.35 * max(smoke - 0.8, 0.0)), 1.0 - exp(-smoke * 1.35), uTone);
   vec3 emit = mix(uThrust, vec3(1.0), 0.5) * heat * heat * uLight2.y;
   vec3 col = (smoke + emit) * alpha + core;
-  float a = clamp(max(alpha, max(col.r, max(col.g, col.b))), 0.0, 1.0);
-  col = min(col, vec3(a));
+  float a = clamp(max(alpha, max(col.r, max(col.g, col.b))), 0.0, 1.0) * edgeFade;
+  col = min(col * edgeFade, vec3(a));
   col += (hash(gl_FragCoord.xy + fract(uTime) * 61.0) - 0.5) / 255.0 * a;
   outColor = vec4(max(col, 0.0), a);
 }`;
@@ -796,7 +802,7 @@ function createEngine({ root, canvas, button, cursor, ramp, props }) {
 
   const craftCenter = () => ({
     x: s.x,
-    y: podH() + s.bh / 2 + s.y + REST
+    y: 24 + podH() + s.bh / 2 + s.y + REST
   });
 
   const nozzles = () => {
