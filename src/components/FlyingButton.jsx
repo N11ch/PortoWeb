@@ -1601,7 +1601,7 @@ function createEngine({ root, canvas, button, cursor, ramp, props }) {
     p.y = q.y;
     p.in = true;
     p.type = e.pointerType || 'mouse';
-    if (s.press && !s.drag && flying() && Math.hypot(q.x - s.press.x, q.y - s.press.y) > 4) startDrag(e);
+    if (s.press && !s.drag && flying() && Math.hypot(q.x - s.press.x, q.y - s.press.y) > 12) startDrag(e);
     if (s.drag) aim();
     updatePointer(0);
     if (s.carry || s.phase !== 'rest') wake();
@@ -1625,7 +1625,8 @@ function createEngine({ root, canvas, button, cursor, ramp, props }) {
     p.type = e.pointerType || 'mouse';
     s.suppress = false;
     const f = pointerAt();
-    if (!overCraft(f.x, f.y, s.attached ? 10 : 0)) return;
+    const inLaunchColumn = s.phase !== 'rest' && Math.abs(f.x - s.x) <= s.bw / 2 + 28;
+    if (!overCraft(f.x, f.y, s.attached ? 14 : 8) && !inLaunchColumn) return;
     if (p.type !== 'mouse' && s.phase === 'rest' && props.current.trigger !== 'click' && !rampOn()) launch();
     s.press = { x: q.x, y: q.y };
     if (s.carry && p.type === 'mouse') {
@@ -1634,31 +1635,9 @@ function createEngine({ root, canvas, button, cursor, ramp, props }) {
     }
   };
 
-  const onUp = e => {
-    if (s.drag) {
-      endDrag(e);
-      return;
-    }
-    s.press = null;
-    if (!s.pressed) return;
-    s.pressed = false;
-    delete button.dataset.pressed;
-    if (s.carry && s.hover) {
-      if (s.phase === 'rest' && rampOn()) {
-        ride();
-        s.pendingClick = true;
-      } else if (s.phase === 'rest' && launch()) {
-        s.attached = Boolean(props.current.carryCursor);
-        s.pendingClick = true;
-      } else if (s.phase !== 'rest') {
-        s.pendingClick = true;
-        if (s.phase === 'hover') s.hold = Math.min(s.hold, s.pt + 0.35);
-      }
-    }
-  };
-
   let clickTimer = 0;
-  const scheduleClickScroll = (delayMs = 950) => {
+  let lastClickTime = 0;
+  const scheduleClickScroll = (delayMs = 850) => {
     if (clickTimer) clearTimeout(clickTimer);
     clickTimer = setTimeout(() => {
       clickTimer = 0;
@@ -1668,6 +1647,48 @@ function createEngine({ root, canvas, button, cursor, ramp, props }) {
     }, delayMs);
   };
 
+  const triggerButtonAction = e => {
+    const now = performance.now();
+    if (now - lastClickTime < 300) return;
+    lastClickTime = now;
+
+    if (s.phase !== 'rest') {
+      if (s.phase === 'hover') s.hold = Math.min(s.hold, s.pt + 0.15);
+      scheduleClickScroll(600);
+      return;
+    }
+    if (rampOn()) {
+      ride();
+      scheduleClickScroll(1000);
+      return;
+    }
+    if (launch()) {
+      s.hold = 0.2;
+      scheduleClickScroll(850);
+      if (s.pointer.type === 'mouse' && s.pointer.in && s.hover) {
+        s.attached = Boolean(props.current.carryCursor);
+      }
+    } else if (props.current.onClick) {
+      props.current.onClick(e);
+    }
+  };
+
+  const onUp = e => {
+    if (s.drag) {
+      endDrag(e);
+      return;
+    }
+    const hadPress = Boolean(s.press);
+    s.press = null;
+    if (s.pressed) {
+      s.pressed = false;
+      delete button.dataset.pressed;
+    }
+    if (hadPress && !s.suppress) {
+      triggerButtonAction(e);
+    }
+  };
+
   const onClick = e => {
     if (s.suppress) {
       s.suppress = false;
@@ -1675,25 +1696,7 @@ function createEngine({ root, canvas, button, cursor, ramp, props }) {
       e.preventDefault();
       return;
     }
-    if (s.phase !== 'rest') {
-      if (s.phase === 'hover') s.hold = Math.min(s.hold, s.pt + 0.15);
-      scheduleClickScroll(750);
-      return;
-    }
-    if (rampOn()) {
-      ride();
-      scheduleClickScroll(1100);
-      return;
-    }
-    if (launch()) {
-      s.hold = 0.2;
-      scheduleClickScroll(950);
-      if (s.pointer.type === 'mouse' && s.pointer.in && s.hover) {
-        s.attached = Boolean(props.current.carryCursor);
-      }
-    } else if (props.current.onClick) {
-      props.current.onClick(e);
-    }
+    triggerButtonAction(e);
   };
 
   root.addEventListener('pointermove', onMove);

@@ -131,7 +131,7 @@ export default function Hero({ isDarkMode }) {
           theme={isDarkMode ? 'dark' : 'light'}
           size="medium"
           altitude={100}
-          hoverTime={0.8}
+          hoverTime={0.6}
           jets={2}
           thrusters={true}
           trigger="hover"
