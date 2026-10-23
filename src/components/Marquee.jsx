@@ -4,12 +4,12 @@ export default function Marquee({ isDarkMode }) {
   const items = [
     "ASPIRING SOFTWARE ENGINEER",
     "COMPUTER SCIENCE STUDENT",
-    "INTERESTED IN MOBILE & FULL-STACK",
+    "PRIMARY FOCUS: FULL-STACK WEB",
     "REACT 19 & VITE",
     "CLEAN & STRUCTURED CODE",
     "NEUMORPHIC BRUTALISM",
-    "INDIVIDUAL & GROUP PROJECTS",
-    "FLUTTER & MODERN WEB"
+    "SECONDARY INTEREST: MOBILE DEV",
+    "REACT, NEXT.JS & NESTJS"
   ];
 
   return (

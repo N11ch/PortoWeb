@@ -4,7 +4,7 @@ import ScrollReveal from './ScrollReveal';
 import profilePic from '../assets/PP_Kacamata.jpg';
 
 export default function About({ isDarkMode, onSelectSkillFilter, selectedSkill }) {
-  const categories = ["All", "Mobile", "Frontend", "Backend & Database", "Languages"];
+  const categories = ["All", "Frontend", "Backend & Database", "Mobile", "Languages"];
   const [activeCategory, setActiveCategory] = React.useState("All");
 
   const filteredSkills = activeCategory === "All" 
@@ -69,13 +69,13 @@ export default function About({ isDarkMode, onSelectSkillFilter, selectedSkill }
                 isDarkMode ? 'text-slate-300' : 'text-[#3d405b]'
               }`}>
                 <p>
-                  Hello! I am Nicholas Kenji, a Computer Science student with a passionate interest in Mobile &amp; Full-Stack software development. Rather than specializing in just one narrow field, I enjoy exploring and building across both cross-platform mobile apps (Flutter &amp; Kotlin) and modern web applications (React, Next.js, TypeScript, and Tailwind CSS).
+                  Hello! I am Nicholas Kenji, a Computer Science student primarily focused on Full-Stack Web &amp; Software Engineering. I enjoy architecting modern web applications end-to-end using React, Next.js, TypeScript, Tailwind CSS, and backend frameworks like Node.js/Express and NestJS, alongside a secondary interest in cross-platform mobile development (Flutter &amp; Kotlin).
                 </p>
                 <p>
                   At my core, my ambition is to grow into a versatile Software Engineer. I focus on developing strong computer science fundamentals, writing clean and maintainable code, and understanding end-to-end software architecture.
                 </p>
                 <p>
-                  Whether developing mobile applications independently or collaborating on full-stack team projects, I strive to deliver functional UI/UX design, reliable logic, and well-structured codebases.
+                  Whether collaborating on full-stack web platforms or building mobile companion apps as a secondary exploration, I strive to deliver functional UI/UX design, reliable backend logic, and well-structured codebases.
                 </p>
               </div>
 
@@ -84,17 +84,17 @@ export default function About({ isDarkMode, onSelectSkillFilter, selectedSkill }
                 <span className={`px-3 py-1.5 rounded-lg border-2 font-mono text-xs font-bold ${
                   isDarkMode ? 'bg-[#232630] border-[#3d4254] text-[#f2cc8f]' : 'bg-[#f0e9df] border-[#2b2d42] text-[#e07a5f]'
                 }`}>
-                  Mobile &amp; Web UI
+                  Full-Stack Web
                 </span>
                 <span className={`px-3 py-1.5 rounded-lg border-2 font-mono text-xs font-bold ${
                   isDarkMode ? 'bg-[#232630] border-[#3d4254] text-[#81b29a]' : 'bg-[#f0e9df] border-[#2b2d42] text-[#4d7c67]'
                 }`}>
-                  Cross-Platform Dev
+                  Mobile (Secondary)
                 </span>
                 <span className={`px-3 py-1.5 rounded-lg border-2 font-mono text-xs font-bold ${
                   isDarkMode ? 'bg-[#232630] border-[#3d4254] text-[#e07a5f]' : 'bg-[#f0e9df] border-[#2b2d42] text-[#3d405b]'
                 }`}>
-                  Clean Structure
+                  Clean Architecture
                 </span>
               </div>
             </div>
@@ -122,7 +122,7 @@ export default function About({ isDarkMode, onSelectSkillFilter, selectedSkill }
                     Computer Science Student
                   </h4>
                   <p className={`text-sm ${isDarkMode ? 'text-slate-400' : 'text-[#3d405b]'}`}>
-                    Pursuing Computer Science fundamentals, Software Engineering principles, Data Structures, and actively exploring Mobile &amp; Full-Stack systems.
+                    Pursuing Computer Science fundamentals, Software Engineering principles, Data Structures, with a main focus on Full-Stack Web systems and secondary exploration in Mobile apps.
                   </p>
                 </div>
 
@@ -130,10 +130,10 @@ export default function About({ isDarkMode, onSelectSkillFilter, selectedSkill }
                   <div className="absolute left-1 top-1.5 w-5 h-5 rounded-full bg-[#81b29a] border-2 border-[#2b2d42]" />
                   <span className="font-mono text-xs font-extrabold uppercase text-[#4d7c67]">Project Collaborations</span>
                   <h4 className={`text-base font-black ${isDarkMode ? 'text-white' : 'text-[#2b2d42]'}`}>
-                    Mobile &amp; Full-Stack Contributor
+                    Full-Stack &amp; Mobile Contributor
                   </h4>
                   <p className={`text-sm ${isDarkMode ? 'text-slate-400' : 'text-[#3d405b]'}`}>
-                    Delivered mobile applications and web projects using Flutter, Kotlin, React, Next.js, and TypeScript.
+                    Built full-stack web applications and REST APIs using React, Next.js, TypeScript, and NestJS, along with cross-platform mobile clients in Flutter &amp; Kotlin.
                   </p>
                 </div>
 

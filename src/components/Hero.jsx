@@ -32,14 +32,14 @@ export default function Hero({ isDarkMode }) {
           <h1 className={`text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-none ${
             isDarkMode ? 'text-white' : 'text-[#2b2d42]'
           }`}>
-            Building <span className="px-2 py-0.5 rounded-lg bg-[#e07a5f] text-white border-2 border-[#2b2d42] shadow-[3px_3px_0px_#2b2d42] inline-block rotate-[-1deg]">Mobile</span> &amp; Full-Stack Products.
+            Building <span className="px-2 py-0.5 rounded-lg bg-[#e07a5f] text-white border-2 border-[#2b2d42] shadow-[3px_3px_0px_#2b2d42] inline-block rotate-[-1deg]">Full-Stack</span> &amp; Mobile Products.
           </h1>
 
           {/* Subtitle / Bio summary */}
           <p className={`text-base sm:text-lg font-medium max-w-2xl leading-relaxed ${
             isDarkMode ? 'text-slate-300' : 'text-[#3d405b]'
           }`}>
-            Computer Science student with a strong interest in mobile development (Flutter, Kotlin) and full-stack web applications (React, Next.js, TypeScript, Tailwind CSS), aspiring to build a career as a Software Engineer.
+            Computer Science student focused on full-stack web applications (React, Next.js, TypeScript, Node.js, NestJS), with a secondary interest in mobile development (Flutter, Kotlin), aspiring to build a career as a Software Engineer.
           </p>
 
           {/* Action CTAs */}
@@ -92,7 +92,7 @@ export default function Hero({ isDarkMode }) {
                 : 'bg-[#fffdf9] border-[#2b2d42] shadow-[4px_4px_0px_#2b2d42]'
             }`}>
               <div className="h-1.5 bg-[#f2cc8f] -mx-2.5 sm:-mx-4 -mt-2.5 sm:-mt-4 mb-2.5 sm:mb-3" />
-              <div className="text-lg sm:text-2xl lg:text-3xl font-black text-[#f2cc8f] font-mono truncate">Mobile &amp; Web</div>
+              <div className="text-lg sm:text-2xl lg:text-3xl font-black text-[#f2cc8f] font-mono truncate">Web &amp; Mobile</div>
               <div className={`text-[10px] sm:text-[11px] font-mono font-bold uppercase ${isDarkMode ? 'text-slate-400' : 'text-[#3d405b]'}`}>
                 Areas of Interest
               </div>
@@ -106,11 +106,11 @@ export default function Hero({ isDarkMode }) {
           
           {/* Floating Retro Tech Badges */}
           <div className="hidden sm:block absolute -top-4 -left-4 z-20 px-3 py-1.5 rounded-xl border-2 font-mono text-[11px] font-black uppercase bg-[#81b29a] text-white border-[#2b2d42] shadow-[3px_3px_0px_#2b2d42] rotate-[-4deg] animate-pulse">
-            Flutter &amp; Kotlin
+            React &amp; Full-Stack
           </div>
 
           <div className="hidden sm:block absolute -bottom-4 -right-4 z-20 px-3 py-1.5 rounded-xl border-2 font-mono text-[11px] font-black uppercase bg-[#f2cc8f] text-[#2b2d42] border-[#2b2d42] shadow-[3px_3px_0px_#2b2d42] rotate-[3deg]">
-            React &amp; Next.js
+            Flutter &amp; Mobile
           </div>
 
           <div className={`relative w-64 h-64 sm:w-80 sm:h-80 max-w-full rounded-2xl border-4 p-3 transition-transform duration-300 hover:scale-[1.02] ${

@@ -107,11 +107,7 @@ export const projectsData = [
 ];
 
 export const skillsData = [
-  // Mobile Development
-  { category: "Mobile", name: "Flutter", level: "Mobile Client & UI" },
-  { category: "Mobile", name: "Kotlin", level: "Android Native" },
-
-  // Frontend & Web
+  // Frontend & Web (Primary)
   { category: "Frontend", name: "React", level: "Web UI" },
   { category: "Frontend", name: "Next.js", level: "Full-Stack Web" },
   { category: "Frontend", name: "TypeScript", level: "Typed JS" },
@@ -119,12 +115,16 @@ export const skillsData = [
   { category: "Frontend", name: "HTML & CSS", level: "Web Core" },
   { category: "Frontend", name: "JavaScript", level: "Web Scripting" },
 
-  // Backend & Database
+  // Backend & Database (Primary)
   { category: "Backend & Database", name: "Node.js / Express", level: "REST API Backend" },
   { category: "Backend & Database", name: "NestJS", level: "Modular Monolith" },
   { category: "Backend & Database", name: "Prisma ORM", level: "Database ORM" },
   { category: "Backend & Database", name: "PostgreSQL / Supabase", level: "Relational DB" },
   { category: "Backend & Database", name: "MySQL", level: "Relational DB" },
+
+  // Mobile Development (Secondary Interest)
+  { category: "Mobile", name: "Flutter", level: "Secondary • Mobile UI" },
+  { category: "Mobile", name: "Kotlin", level: "Secondary • Android" },
 
   // Programming Languages
   { category: "Languages", name: "C", level: "Core Fundamentals" }
