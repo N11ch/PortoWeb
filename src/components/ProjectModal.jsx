@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 export default function ProjectModal({ project, onClose, isDarkMode }) {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
-  const [deviceFrame, setDeviceFrame] = useState('desktop');
+  const [deviceFrame, setDeviceFrame] = useState(project?.defaultFrame || 'desktop');
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   if (!project) return null;
@@ -58,6 +58,13 @@ export default function ProjectModal({ project, onClose, isDarkMode }) {
                 )}
               </>
             )}
+
+            {project.status && (
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border-2 font-mono text-xs font-black uppercase bg-[#2b2d42] text-[#f2cc8f] border-[#2b2d42] shadow-[2px_2px_0px_#e07a5f]">
+                <span className="w-2 h-2 rounded-full bg-[#e07a5f] animate-pulse" />
+                {project.status}
+              </span>
+            )}
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-black font-mono tracking-tight">
@@ -104,13 +111,17 @@ export default function ProjectModal({ project, onClose, isDarkMode }) {
 
         {/* Screenshot Gallery Viewer */}
         <div className="relative mb-6 flex justify-center">
-          <div className={`relative transition-all duration-300 rounded-2xl overflow-hidden border-3 border-[#2b2d42] bg-[#2b2d42] shadow-[6px_6px_0px_#2b2d42] ${
-            deviceFrame === 'mobile' ? 'w-full max-w-[280px] sm:w-72 h-[420px] sm:h-[480px]' : 'w-full h-64 sm:h-96'
+          <div className={`relative transition-all duration-300 rounded-2xl overflow-hidden border-3 border-[#2b2d42] bg-[#0B0F17] shadow-[6px_6px_0px_#2b2d42] ${
+            deviceFrame === 'mobile' ? 'w-full max-w-[280px] sm:w-72 h-[460px] sm:h-[520px]' : 'w-full h-64 sm:h-96'
           }`}>
             <img
               src={project.galleryImages[activeImageIndex]}
               alt={`Screenshot ${activeImageIndex + 1}`}
-              className="w-full h-full object-cover cursor-pointer"
+              className={`w-full h-full cursor-pointer ${
+                project.defaultFrame === 'mobile' && deviceFrame === 'desktop'
+                  ? 'object-contain'
+                  : 'object-cover object-top'
+              }`}
               onClick={() => setIsLightboxOpen(true)}
             />
 
@@ -132,9 +143,17 @@ export default function ProjectModal({ project, onClose, isDarkMode }) {
               </>
             )}
 
+            {/* Prototype Notice Tag */}
+            {project.isPrototype && (
+              <div className="absolute top-3 left-3 px-3 py-1 rounded-lg border-2 bg-[#f2cc8f] text-[#2b2d42] border-[#2b2d42] shadow-[2px_2px_0px_#2b2d42] font-mono text-[10px] font-black uppercase flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-[#e07a5f] animate-pulse" />
+                Prototype UI • Work in Progress
+              </div>
+            )}
+
             {/* Slide Counter Indicator */}
             <div className="absolute bottom-3 left-3 px-3 py-1 rounded-md border bg-[#2b2d42]/90 text-white border-slate-700 font-mono text-[10px] font-bold">
-              {activeImageIndex + 1} / {project.galleryImages.length} Screenshots
+              {activeImageIndex + 1} / {project.galleryImages.length} {project.isPrototype ? 'Prototype Previews' : 'Screenshots'}
             </div>
           </div>
         </div>

@@ -167,10 +167,12 @@ export default function Projects({ isDarkMode, onSelectProject, selectedSkillFil
                         e.target.src = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80";
                       }}
                       alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${
+                        project.defaultFrame === 'mobile' ? 'object-top' : ''
+                      }`}
                     />
                     
-                    <div className="absolute top-3 left-3 flex gap-2">
+                    <div className="absolute top-3 left-3 right-3 flex flex-wrap gap-2">
                       <span className={`px-3 py-1 rounded-lg border-2 font-mono text-[10px] font-black uppercase tracking-wider shadow-[2px_2px_0px_#2b2d42] ${
                         project.category === 'individual'
                           ? 'bg-[#81b29a] text-white border-[#2b2d42]'
@@ -178,10 +180,17 @@ export default function Projects({ isDarkMode, onSelectProject, selectedSkillFil
                       }`}>
                         {project.category === 'individual' ? 'Individual Project' : `Group Project (Team of ${project.teamSize})`}
                       </span>
+
+                      {project.status && (
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg border-2 font-mono text-[10px] font-black uppercase tracking-wider bg-[#e07a5f] text-white border-[#2b2d42] shadow-[2px_2px_0px_#2b2d42]">
+                          <span className="w-2 h-2 rounded-full bg-[#f2cc8f] animate-pulse border border-[#2b2d42]" />
+                          {project.status}
+                        </span>
+                      )}
                     </div>
 
                     <div className="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg border-2 font-mono text-[10px] font-black bg-[#2b2d42]/90 text-white border-[#2b2d42]">
-                      {project.galleryImages.length} Screenshots
+                      {project.galleryImages.length} {project.isPrototype ? 'Prototype Previews' : 'Screenshots'}
                     </div>
                   </div>
 

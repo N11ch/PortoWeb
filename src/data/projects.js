@@ -63,6 +63,8 @@ export const projectsData = [
     id: "proj-cidash",
     title: "Cidash - Social Gamified Fitness Tracker (Invite-Only)",
     category: "group",
+    status: "In Development • Prototype",
+    isPrototype: true,
     tagline: "Invite-only social gamified fitness PWA with Private Circles, P2P Bomb Missions, Live Group Run, and GPS anti-cheat verification.",
     overview: "Cidash is an interactive fitness Progressive Web App (PWA) designed to overcome workout social anxiety on public platforms. Users exercise casually within trusted friend circles using an 8-character Invite Code system, run together synchronously via Live Group Run, challenge friends with coin-wagered P2P Bomb Missions, and compete fairly with quarterly (3-month) Season Resets.",
     problemStatement: "Public fitness trackers often trigger social anxiety and comparison pressure, while lacking engaging peer-to-peer gamification and reliable anti-cheat verification for casual friend groups.",
@@ -79,9 +81,14 @@ export const projectsData = [
       "Prisma ORM",
       "PostgreSQL / Supabase"
     ],
-    coverImage: "/images/projects/cidash/cover.svg",
+    coverImage: "/images/projects/cidash/cover.png",
+    defaultFrame: "mobile",
     galleryImages: [
-      "/images/projects/cidash/cover.svg"
+      "/images/projects/cidash/screenshot-1.png",
+      "/images/projects/cidash/screenshot-2.png",
+      "/images/projects/cidash/screenshot-3.png",
+      "/images/projects/cidash/screenshot-4.png",
+      "/images/projects/cidash/screenshot-5.png"
     ],
     liveUrl: "https://github.com/N11ch/Cidash",
     githubUrl: "https://github.com/N11ch/Cidash",
