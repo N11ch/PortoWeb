@@ -1,6 +1,7 @@
 import React from 'react';
 import LanyardCard from './LanyardCard';
 import ElasticMesh from './ElasticMesh';
+import FlyingButton from './FlyingButton';
 
 export default function Hero({ isDarkMode }) {
   const scrollTo = (id) => {
@@ -123,19 +124,30 @@ export default function Hero({ isDarkMode }) {
 
       </div>
 
-      {/* Scroll Down Indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10">
-        <button
+      {/* Scroll Down Indicator with React Bits FlyingButton */}
+      <div className="w-full max-w-xl h-[200px] mx-auto -mt-4 relative z-20">
+        <FlyingButton
           onClick={() => scrollTo('about')}
-          className={`flex flex-col items-center gap-1 font-mono text-[10px] font-bold uppercase tracking-widest transition-all ${
-            isDarkMode ? 'text-[#f2cc8f] hover:text-white' : 'text-[#2b2d42] hover:text-[#e07a5f]'
-          }`}
+          theme={isDarkMode ? 'dark' : 'light'}
+          size="medium"
+          altitude={125}
+          hoverTime={2.0}
+          jets={2}
+          thrusters={true}
+          trigger="hover"
+          carryCursor={false}
+          buttonColor="#e07a5f"
+          textColor="#ffffff"
+          thrustColor="#f2cc8f"
+          style={{ minHeight: '200px' }}
         >
-          <span>Explore Details</span>
-          <svg className="w-4 h-4 animate-bounce fill-current" viewBox="0 0 24 24">
-            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/>
-          </svg>
-        </button>
+          <span className="inline-flex items-center gap-2 font-mono text-xs font-black uppercase tracking-widest">
+            <span>Explore Details</span>
+            <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
+            </svg>
+          </span>
+        </FlyingButton>
       </div>
     </section>
   );
