@@ -1,6 +1,6 @@
 import React from 'react';
 import LanyardCard from './LanyardCard';
-import BubbleText from './BubbleText';
+import ElasticMesh from './ElasticMesh';
 
 export default function Hero({ isDarkMode }) {
   const scrollTo = (id) => {
@@ -29,8 +29,26 @@ export default function Hero({ isDarkMode }) {
             </div>
           </div>
 
-          {/* Main Headline with Interactive Bubble Text & Retro Highlight */}
-          <BubbleText isDarkMode={isDarkMode} />
+          {/* Main Headline with React Bits ElasticMesh */}
+          <div className="w-full h-[200px] sm:h-[250px] lg:h-[280px] -my-2">
+            <ElasticMesh
+              text={"Building\nFull-Stack &\nMobile Products."}
+              fontFamily="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              fontWeight={900}
+              color="#e07a5f"
+              material="balloon"
+              inflate={1.2}
+              stiffness={0.45}
+              wobble={0.68}
+              grabRadius={85}
+              stretch={0.65}
+              press={0.65}
+              shadow={0.5}
+              intro={true}
+              theme={isDarkMode ? 'dark' : 'light'}
+              className="w-full h-full cursor-grab active:cursor-grabbing"
+            />
+          </div>
 
           {/* Subtitle / Bio summary */}
           <p className={`text-base sm:text-lg font-medium max-w-2xl leading-relaxed ${
